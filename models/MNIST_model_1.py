@@ -1,7 +1,13 @@
 #builds a simple convolutional nerual network for MNIST classification
 
+import keras
+from keras.models import Model
+from keras.models import Sequential
+from keras.layers import Input, Dense, Dropout, Flatten
+from keras.layers import Conv2D, MaxPooling2D
+
 def build_model():
-    input_shape = (28, 28)
+    input_shape = (28, 28, 1) #channels last
     num_classes = 10
 
     model = Sequential()
@@ -13,9 +19,5 @@ def build_model():
     model.add(Dense(128, activation='relu'))
     model.add(Dropout(0.5))
     model.add(Dense(num_classes, activation='softmax'))
-
-    model.compile(loss=keras.losses.categorical_crossentropy,
-                optimizer=keras.optimizers.Adadelta(),
-                metrics=['accuracy'])
 
     return model
