@@ -124,7 +124,7 @@ class SimpleNeuronalNetwork(BaseNetwork):
         self.getOutput(inputValues)
 
         # return gradient
-        return self.getDerivatives(self.CostFunction.getDerivatives(self.Neurons[-1], correctOutputValues))
+        return self.getDerivatives(self.CostFunction.get_derivatives(self.Neurons[-1], correctOutputValues))
         
     def applyChanges(self, learningRate, biasLearningRate, regularization, constrainWeights = False): 
         #Changes the weights after a batch

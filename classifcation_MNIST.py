@@ -1,3 +1,7 @@
+"""
+Trains a simple NN on MNIST classification
+"""
+
 from data.MNIST import *
 from models.MNIST_model_1 import *
 from helper.hyperparameter import *
