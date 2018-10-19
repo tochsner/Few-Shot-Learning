@@ -11,10 +11,10 @@ input_shape = (28,28,1)
 input_lenght = 784
 embedding_lenght = 20
 
-epochs = 20
-samples_per_epoch = 4000
-batch_size = 20
-number_test_samples = 1000
+epochs = 100
+samples_per_epoch = 5000
+batch_size = 30
+number_test_samples = 2000
 
 losses = Losses(input_lenght, embedding_lenght)
 
