@@ -1,2 +1,0 @@
-round_epochs,val_loss,val_quadruplet_metric,loss,quadruplet_metric,lr,epochs,batch_size,optimizer,embeddings,activation,neurons
-1,-0.42411319208145143,0.916,-0.41151349830627443,0.892,1,10,20,<class 'keras.optimizers.Adam'>,20,<function relu at 0x000001EBA0364158>,1280

@@ -28,7 +28,7 @@ data_train = group_data(data[0])
 data_test = group_data(data[1])
 
 samples_per_epoch = 1000
-number_test_samples = 5000 
+number_test_samples = 4000 
 
 def train(x_train, y_train, x_val, y_val, params):
     epochs = params['epochs']    
@@ -50,21 +50,15 @@ def train(x_train, y_train, x_val, y_val, params):
     out = model.fit(x_train, y_train, epochs=1, verbose=0, validation_data=(x_train, y_train))
     return out, model
 
-params = {'lr': (0.1, 10.1, 10),
-            'epochs': [100],
-            'batch_size': [6,20,40],
-            'optimizer': [Adam, Nadam, RMSprop],
-            'embeddings': [10, 20, 40, 80],
-            'activation': [relu, elu, selu],
-            'neurons': (50, 500, 9)}
-
-# params = {'lr': [1],
-#             'epochs': [10],
-#             'batch_size': [20],
-#             'optimizer': [Adam],
-#             'embeddings': [20],
-#             'activation': [relu],
-#             'neurons': [1280]}
+params = {'lr': (0.01, 1.01, 10),
+            'epochs': [150],
+            'batch_size': [20],
+            'optimizer': [Adam],
+            'embeddings': [40],
+            'activation': [relu],
+            'neurons': [400],
+            'decoderfactor': (0, 3, 6),
+            'dropout': [0]}
 
 x_test_fake = np.zeros((4000, 28, 28, 1))
 y_test_fake = np.zeros((4000))
@@ -75,4 +69,4 @@ h = ta.Scan(x_test_fake, y_test_fake, params=params,
             model=train,
             experiment_no='1',
             functional_model=True,
-            grid_downsample=0.03)  
+            grid_downsample=1)  

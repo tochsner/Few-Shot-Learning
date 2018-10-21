@@ -14,17 +14,17 @@ def build_model(input_shape, params):
     input_layer = Input(shape=input_shape)    
     dense = Flatten()(input_layer)
     dense = Dense(params['neurons'], activation=params['activation'])(dense)
+    dense = Dropout(params['dropout'])(dense)
     dense = Dense(params['neurons'], activation=params['activation'])(dense)
     
     encoder_output_layer = Dense(params['embeddings'], activation='sigmoid')(dense)
     
-    decoder_dense = Dense(params['neurons'], activation=params['activation'])(encoder_output_layer)    
+    decoder_dense = Dense(params['neurons'], activation=params['activation'])(encoder_output_layer) 
+    decoder_dense = Dropout(params['dropout'])(decoder_dense)   
     decoder_dense = Dense(params['neurons'], activation=params['activation'])(decoder_dense)    
-    decoder_dense = Dense(784, activation='sigmoid')(decoder_dense)    
-    decoder_output_layer = Reshape(input_shape)(decoder_dense)    
-
-    flattened_Output = Flatten()(decoder_output_layer)
-    output_layer = Concatenate()([encoder_output_layer, flattened_Output])
+    decoder_output_layer = Dense(784, activation='sigmoid')(decoder_dense)    
+    
+    output_layer = Concatenate()([encoder_output_layer, decoder_output_layer])
 
     model = Model(inputs=input_layer, outputs=output_layer)
 
