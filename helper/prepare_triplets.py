@@ -112,3 +112,23 @@ def createTrainingDataForQuadrupletLoss(model, grouped_data, num_samples, embedd
             y_data[2 * sample + 1, 2*embedding_lenght : ] = second_sample1.reshape((input_lenght,))
 
     return (x_data, y_data)
+
+"""
+Randomly chooses k samples per classes for few-shot-learning
+"""
+def sample_data_for_k_shot(grouped_data, k):
+    num_classes = len(grouped_data)
+    sampled_grouped_data = []
+
+    for c in range(num_classes):
+        np.random.shuffle(grouped_data[c])
+        sampled_grouped_data.append(grouped_data[c][:k])
+
+    return sampled_grouped_data
+
+"""
+Returns the embedding of an output.
+Output format of the Keras model: Embedding ; Output (Flatten)
+"""
+def get_embedding(output, embedding_lenght):
+    return output[:embedding_lenght]
