@@ -25,7 +25,7 @@ data = prepare_data_for_keras(data)
 data_train = group_data(data[0])
 data_test = group_data(data[1])
 
-for r in range(10):
+def trainModel():
     model = build_model(input_shape, embedding_lenght)
     model.compile('adam', losses.quadruplet_loss, metrics=[losses.quadruplet_metric])
 
@@ -44,3 +44,6 @@ for r in range(10):
 
     #save model
     model.save("saved_models/MNIST Similarity Mine " + str(r))
+
+for i in range(10):
+    trainModel()

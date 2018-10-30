@@ -25,10 +25,10 @@ def group_data(data):
 
 
 """
-Generates input and output pairs for performing similarity leraning with Keras.
+Generates input and output pairs for performing similarity learning with Keras.
 Based on quadruplet-selection.
 Output format of the Keras model: Embedding ; Output (Flatten)
-Format of y_train: Target Embedding ; Dissimlilar Embedding ; Target Decoder Output
+Format of y_train: Target Embedding ; Dissimilar Embedding ; Target Decoder Output
 """
 def createTrainingDataForQuadrupletLoss(model, grouped_data, num_samples, embedding_lenght):  
     num_classes = len(grouped_data)
@@ -55,57 +55,57 @@ def createTrainingDataForQuadrupletLoss(model, grouped_data, num_samples, embedd
         
         outputs = model.predict(np.array([main_sample1, main_sample2, second_sample1, second_sample2]))
 
-        costs =    (losses.get_distance(outputs[0][ : embedding_lenght], outputs[2][ : embedding_lenght]),
-                    losses.get_distance(outputs[0][ : embedding_lenght], outputs[3][ : embedding_lenght]),
-                    losses.get_distance(outputs[1][ : embedding_lenght], outputs[2][ : embedding_lenght]),
-                    losses.get_distance(outputs[1][ : embedding_lenght], outputs[3][ : embedding_lenght]))
+        costs = (losses.get_distance(outputs[0][ : embedding_lenght], outputs[2][ : embedding_lenght]),
+                 losses.get_distance(outputs[0][ : embedding_lenght], outputs[3][ : embedding_lenght]),
+                 losses.get_distance(outputs[1][ : embedding_lenght], outputs[2][ : embedding_lenght]),
+                 losses.get_distance(outputs[1][ : embedding_lenght], outputs[3][ : embedding_lenght]))
 
         argmin = np.argmin(costs)
 
         if argmin == 0:
-            #mainSample 1
+            # mainSample 1
             x_data[2 * sample] = main_sample1    
             y_data[2 * sample, : embedding_lenght] = outputs[1][ : embedding_lenght]
             y_data[2 * sample, embedding_lenght : 2*embedding_lenght] = outputs[2][ : embedding_lenght]
             y_data[2 * sample, 2*embedding_lenght : ] = main_sample2.reshape((input_lenght,))
 
-            #secondSample 1
+            # secondSample 1
             x_data[2 * sample + 1] = second_sample1           
             y_data[2 * sample + 1, : embedding_lenght] = outputs[3][ : embedding_lenght]
             y_data[2 * sample + 1, embedding_lenght : 2*embedding_lenght] = outputs[0][ : embedding_lenght]
             y_data[2 * sample + 1, 2*embedding_lenght : ] = second_sample2.reshape((input_lenght,))
         elif argmin == 1:
-            #mainSample 1
+            # mainSample 1
             x_data[2 * sample] = main_sample1    
             y_data[2 * sample, : embedding_lenght] = outputs[1][ : embedding_lenght]
             y_data[2 * sample, embedding_lenght : 2*embedding_lenght] = outputs[3][ : embedding_lenght]
             y_data[2 * sample, 2*embedding_lenght : ] = main_sample2.reshape((input_lenght,))
 
-            #secondSample 2
+            # secondSample 2
             x_data[2 * sample + 1] = second_sample2            
             y_data[2 * sample + 1, : embedding_lenght] = outputs[2][ : embedding_lenght]
             y_data[2 * sample + 1, embedding_lenght : 2*embedding_lenght] = outputs[0][ : embedding_lenght]
             y_data[2 * sample + 1, 2*embedding_lenght : ] = second_sample1.reshape((input_lenght,))
         elif argmin == 2:
-            #mainSample 2
+            # mainSample 2
             x_data[2 * sample] = main_sample2   
             y_data[2 * sample, : embedding_lenght] = outputs[0][ : embedding_lenght]
             y_data[2 * sample, embedding_lenght : 2*embedding_lenght] = outputs[2][ : embedding_lenght]
             y_data[2 * sample, 2*embedding_lenght : ] = main_sample1.reshape((input_lenght,))
 
-            #secondSample 1
+            # secondSample 1
             x_data[2 * sample + 1] = second_sample1
             y_data[2 * sample + 1, : embedding_lenght] = outputs[3][ : embedding_lenght]
             y_data[2 * sample + 1, embedding_lenght : 2*embedding_lenght] = outputs[1][ : embedding_lenght]
             y_data[2 * sample + 1, 2*embedding_lenght : ] = second_sample2.reshape((input_lenght,))
         elif argmin == 3:
-            #mainSample 2
+            # mainSample 2
             x_data[2 * sample] = main_sample2   
             y_data[2 * sample, : embedding_lenght] = outputs[0][ : embedding_lenght]
             y_data[2 * sample, embedding_lenght : 2*embedding_lenght] = outputs[3][ : embedding_lenght]
             y_data[2 * sample, 2*embedding_lenght : ] = main_sample1.reshape((input_lenght,))
 
-            #secondSample 2
+            # secondSample 2
             x_data[2 * sample + 1] = second_sample2
             y_data[2 * sample + 1, : embedding_lenght] = outputs[2][ : embedding_lenght]
             y_data[2 * sample + 1, embedding_lenght : 2*embedding_lenght] = outputs[1][ : embedding_lenght]
