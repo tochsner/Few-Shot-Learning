@@ -9,14 +9,14 @@ from helper.losses_similarity import *
 
 input_shape = (105, 105, 1)
 input_length = 105 * 105
-embedding_length = 40
+embedding_length = 20
 
 epochs = 100
-samples_per_epoch = 5000
+samples_per_epoch = 1000
 batch_size = 20
 number_test_samples = 2000
 
-losses = Losses(input_length, embedding_length, decoder_factor=1)
+losses = Losses(input_length, embedding_length, decoder_factor=0)
 
 data = load_background_data()
 grouped_data = prepare_grouped_data_for_keras(data)
