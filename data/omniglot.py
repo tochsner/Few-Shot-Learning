@@ -2,46 +2,91 @@
 Downloads the omniglot dataset and prepares it for the use with keras.
 """
 
-import keras
-from keras import utils
-from keras.datasets import mnist
+import os
 import numpy as np
-
+from skimage.io import imread
 
 background_set_path = "C:/Users/tobia/Documents/Programmieren/AI/omniglot/images_background/images_background"
-evaluation_set_path = "C:/Users/tobia/Documents/Programmieren/AI/omniglot/images_background/images_evaluation"
+evaluation_set_path = "C:/Users/tobia/Documents/Programmieren/AI/omniglot/images_evaluation/images_evaluation"
 
 img_rows = 105
 img_cols = 105
 
+def load_image(path):
+    return 1 - (imread(path) / 256)
+
 """
 Loads the omniglot dataset.
-Format: ([language, character, writer, array(105, 105)], ([language_test, character, writer, array(105, 105)])
+Format: [language, character, writer, array(105, 105)]
 """
-def load_data():
+def load_background_data():
     background_data = []
+
+    for language in os.listdir(background_set_path):
+        language_path = os.path.join(background_set_path, language)
+        background_data.append([])
+        for character in os.listdir(language_path):
+            character_path = os.path.join(language_path, character)
+            background_data[-1].append([])
+            for image in os.listdir(character_path):
+                image_path = os.path.join(character_path, image)
+                image = load_image(image_path)
+                background_data[-1][-1].append(image)
+
+    return background_data
+
+def load_evaluation_data():
     evaluation_data = []
 
+    for language in os.listdir(evaluation_set_path):
+        language_path = os.path.join(evaluation_set_path, language)
+        evaluation_data.append([])
+        for character in os.listdir(language_path):
+            character_path = os.path.join(language_path, character)
+            evaluation_data[-1].append([])
+            for image in os.listdir(character_path):
+                image_path = os.path.join(character_path, image)
+                image = load_image(image_path)
+                evaluation_data[-1][-1].append(image)
 
-
-    return ((x_train, y_train), (x_test, y_test))
+    return evaluation_data
 
 """     
 Formats the data for classification with Keras.
+Format of data: [language, character, writer, array(105, 105)]
 """
 def prepare_data_for_keras(data):
-    (x_train, y_train), (x_test, y_test) = data
+    num_characters = sum([len(lang) for lang in data])
+    num_samples = sum([len(char) for lang in data for char in lang])
 
     # uses channels_last
-    x_train = x_train.reshape(x_train.shape[0], img_rows, img_cols, 1)
-    x_test = x_test.reshape(x_test.shape[0], img_rows, img_cols, 1)
+    train = np.zeros((num_samples, img_rows, img_cols, 1))
+    test = np.zeros((num_samples, num_characters))
 
-    x_train = x_train.astype('float32')
-    x_test = x_test.astype('float32')
-    x_train /= 255
-    x_test /= 255
+    character_id = 0
+    sample_id = 0
+    for language in data:
+        for character in language:
+            for image in character:
+                train[sample_id] = image.reshape(img_rows, img_cols, 1)
+                test[sample_id][character_id] = 1
+                sample_id += 1
+            character_id += 1
 
-    y_train = keras.utils.to_categorical(y_train, num_classes)
-    y_test = keras.utils.to_categorical(y_test, num_classes)
+    return train, test
 
-    return ((x_train, y_train), (x_test, y_test))
+def prepare_grouped_data_for_keras(data):
+    num_characters = sum([len(lang) for lang in data])
+    num_samples = sum([len(char) for lang in data for char in lang])
+
+    grouped_data = [[] for i in range(num_characters)]
+
+    character_id = 0
+    sample_id = 0
+    for language in data:
+        for character in language:
+            for image in character:
+                grouped_data[character_id].append(image.reshape(img_rows, img_cols, 1))
+            character_id += 1
+
+    return grouped_data

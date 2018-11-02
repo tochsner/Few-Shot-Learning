@@ -6,7 +6,7 @@ from .losses_similarity import *
 losses = Losses()
 
 """
-Returns the dataset grouped after the different labels. returns (num_labels, num_samples_per_class, x) (as nested lists, x is an array)
+Returns the dataset grouped after the different labels. returns (labels, num_samples_per_class, x) (as nested lists, x is an array)
 """
 def group_data(data):
     x_data, y_data = data
@@ -132,3 +132,12 @@ Output format of the Keras model: Embedding ; Output (Flatten)
 """
 def get_embedding(output, embedding_lenght):
     return output[:embedding_lenght]
+
+"""
+Splits the list into two sublists with ratio r.
+"""
+def split_list(original_list, r):
+    number_samples_total = len(original_list)
+    number_samples_1 = int(number_samples_total * r)
+
+    return original_list[:number_samples_1], original_list[number_samples_1:]
