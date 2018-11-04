@@ -2,14 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e00c8425-6c7f-43a0-adb4-72fc4689ae11" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/helper/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/helper/hyperparameter_search.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/helper/logger.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/omniglot_similarity_hps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/omniglot_basic_similarity_conv_model.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dictionaries/tobia.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/tobia.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Omniglot Similarity.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/omniglot.py" beforeDir="false" afterPath="$PROJECT_DIR$/data/omniglot.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helper/losses_similarity.py" beforeDir="false" afterPath="$PROJECT_DIR$/helper/losses_similarity.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/models/omniglot_basic_similarity_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/omniglot_basic_similarity_model.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/omniglot_similarity.py" beforeDir="false" afterPath="$PROJECT_DIR$/omniglot_similarity.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/omniglot_similarity_hps.py" beforeDir="false" afterPath="$PROJECT_DIR$/omniglot_similarity_hps.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,9 +22,9 @@
     <session id="-231381463">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="12" />
+          <entry key="project.closed" value="14" />
           <entry key="project.open.time.0" value="1" />
-          <entry key="project.open.time.1" value="3" />
+          <entry key="project.open.time.1" value="4" />
           <entry key="project.open.time.11" value="1" />
           <entry key="project.open.time.12" value="1" />
           <entry key="project.open.time.13" value="1" />
@@ -32,33 +33,34 @@
           <entry key="project.open.time.5" value="1" />
           <entry key="project.open.time.7" value="1" />
           <entry key="project.open.time.8" value="1" />
-          <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="13" />
+          <entry key="project.open.time.9" value="2" />
+          <entry key="project.opened" value="15" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="dummy" value="32" />
-          <entry key="py" value="5596" />
+          <entry key="dummy" value="42" />
+          <entry key="py" value="6693" />
+          <entry key="txt" value="15" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="32" />
-          <entry key="Python" value="5596" />
+          <entry key="PLAIN_TEXT" value="57" />
+          <entry key="Python" value="6693" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="log" value="1" />
-          <entry key="py" value="39" />
-          <entry key="txt" value="5" />
+          <entry key="py" value="59" />
+          <entry key="txt" value="22" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="PLAIN_TEXT" value="6" />
-          <entry key="Python" value="39" />
+          <entry key="PLAIN_TEXT" value="23" />
+          <entry key="Python" value="59" />
         </counts>
       </usages-collector>
     </session>
@@ -68,20 +70,41 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/models/omniglot_basic_similarity_model.py">
           <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="399">
+              <caret line="21" column="64" selection-start-line="21" selection-start-column="64" selection-end-line="21" selection-end-column="64" />
+              <folding>
+                <element signature="e#163#175#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/helper/prepare_triplets.py">
+          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="152">
-              <caret line="14" column="51" lean-forward="true" selection-start-line="14" selection-start-column="51" selection-end-line="14" selection-end-column="51" />
+              <caret line="11" selection-start-line="11" selection-end-line="12" />
+              <folding>
+                <marker date="1541180384313" expanded="true" signature="6009:6014" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/models/omniglot_basic_similarity_conv_model.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="21" column="54" lean-forward="true" selection-start-line="21" selection-start-column="54" selection-end-line="21" selection-end-column="54" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/omniglot_similarity_hps.py">
+        <entry file="file://$PROJECT_DIR$/Omniglot Similarity Conv.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="353">
-              <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="41" />
-              <folding>
-                <element signature="e#124#151#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="526">
+              <caret line="76" lean-forward="true" selection-start-line="76" selection-end-line="76" />
             </state>
           </provider>
         </entry>
@@ -100,6 +123,7 @@
       <find>\</find>
       <find>rms</find>
       <find>0.6</find>
+      <find>0.85</find>
     </findStrings>
     <replaceStrings>
       <replace>/</replace>
@@ -128,13 +152,18 @@
         <option value="$PROJECT_DIR$/models/omniglot_basic_conv_model.py" />
         <option value="$PROJECT_DIR$/models/omniglot_basic_classification_model.py" />
         <option value="$PROJECT_DIR$/omniglot_classification.py" />
-        <option value="$PROJECT_DIR$/data/omniglot.py" />
         <option value="$PROJECT_DIR$/helper/prepare_triplets.py" />
         <option value="$PROJECT_DIR$/helper/logger.py" />
         <option value="$PROJECT_DIR$/helper/__init__.py" />
-        <option value="$PROJECT_DIR$/omniglot_similarity.py" />
         <option value="$PROJECT_DIR$/helper/hyperparameter_search.py" />
+        <option value="$PROJECT_DIR$/omniglot_similarity.py" />
+        <option value="$PROJECT_DIR$/data/omniglot.py" />
+        <option value="$PROJECT_DIR$/Omniglot Similarity.txt" />
         <option value="$PROJECT_DIR$/models/omniglot_basic_similarity_model.py" />
+        <option value="$PROJECT_DIR$/Omniglot Similarity Conv 28.txt" />
+        <option value="$PROJECT_DIR$/models/omniglot_basic_similarity_conv_model.py" />
+        <option value="$PROJECT_DIR$/Omniglot Similarity Conv.txt" />
+        <option value="$PROJECT_DIR$/helper/losses_similarity.py" />
         <option value="$PROJECT_DIR$/omniglot_similarity_hps.py" />
       </list>
     </option>
@@ -161,7 +190,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -188,12 +216,13 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SearchEverywhereHistoryKey" value="plugins&#9;ACTION&#9;WelcomeScreen.Plugins" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Genre-Classification/helper/logger.py" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../MNIST" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Language Defaults" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -205,8 +234,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\tobia\Documents\Programmieren\AI\Few-Shot-Learning" />
       <recent name="C:\Users\tobia\Documents\Programmieren\AI\Few-Shot-Learning\models" />
+      <recent name="C:\Users\tobia\Documents\Programmieren\AI\Few-Shot-Learning" />
       <recent name="C:\Users\tobia\Documents\Programmieren\AI\Few-Shot-Learning\data" />
     </key>
   </component>
@@ -307,6 +336,27 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="omniglot_similarity" type="PythonConfigurationType" factoryName="Python">
+      <module name="Few-Shot-Learning" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/omniglot_similarity.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="omniglot_similarity_hps" type="PythonConfigurationType" factoryName="Python">
       <module name="Few-Shot-Learning" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -319,7 +369,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/omniglot_similarity_hps.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\tobia\Documents\Programmieren\AI\Few-Shot-Learning\omniglot_similarity_hps.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -352,10 +402,11 @@
     <list>
       <item itemvalue="Python.Python" />
       <item itemvalue="Python.omniglot_classification" />
+      <item itemvalue="Python.omniglot_similarity_hps" />
+      <item itemvalue="Python.omniglot_similarity" />
       <item itemvalue="Python.MNIST_classification" />
       <item itemvalue="Python.MNIST_few_shot" />
       <item itemvalue="Python.test" />
-      <item itemvalue="Python.omniglot_similarity_hps" />
     </list>
     <recent_temporary>
       <list>
@@ -387,7 +438,7 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3799043" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.38564593" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -411,6 +462,16 @@
           <url>file://$PROJECT_DIR$/models/MNIST_basic_similarity_model.py</url>
           <line>5</line>
           <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/helper/prepare_triplets.py</url>
+          <line>55</line>
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/data/omniglot.py</url>
+          <line>34</line>
+          <option name="timeStamp" value="35" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
@@ -456,9 +517,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="562">
           <caret line="37" column="13" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="13" />
-          <folding>
-            <element signature="e#127#151#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -504,28 +562,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/helper/prepare_triplets.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="522">
-          <caret line="123" column="42" lean-forward="true" selection-start-line="123" selection-start-column="42" selection-end-line="123" selection-end-column="42" />
-          <folding>
-            <marker date="1541180384313" expanded="true" signature="6009:6014" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/omniglot.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="58" column="28" selection-start-line="58" selection-start-column="28" selection-end-line="58" selection-end-column="28" />
-          <folding>
-            <element signature="e#80#89#0" expanded="true" />
-            <marker date="1541179976488" expanded="true" signature="415:453" ph="..." />
-            <marker date="1541179976488" expanded="true" signature="1163:1786" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../Genre-Classification/helper/logger.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -539,14 +575,23 @@
     <entry file="file://$PROJECT_DIR$/talos.log">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/helper/hyperparameter_search.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="23" column="63" lean-forward="true" selection-start-line="23" selection-start-column="63" selection-end-line="23" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/omniglot_similarity.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="429">
-          <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
-          <folding>
-            <element signature="e#69#96#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="-147">
+          <caret line="7" column="38" lean-forward="true" selection-start-line="7" selection-start-column="38" selection-end-line="7" selection-end-column="38" />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MNIST_similarity_talos.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/helper/logger.py">
@@ -556,37 +601,81 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/omniglot_basic_similarity_model.py">
+    <entry file="file://$PROJECT_DIR$/helper/losses.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="14" column="51" lean-forward="true" selection-start-line="14" selection-start-column="51" selection-end-line="14" selection-end-column="51" />
+        <state relative-caret-position="114">
+          <caret line="6" column="43" selection-start-line="6" selection-start-column="43" selection-end-line="6" selection-end-column="43" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/helper/hyperparameter_search.py">
+    <entry file="file://$PROJECT_DIR$/data/omniglot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="23" column="63" lean-forward="true" selection-start-line="23" selection-start-column="63" selection-end-line="23" selection-end-column="63" />
+        <state relative-caret-position="475">
+          <caret line="34" column="25" selection-start-line="34" selection-start-column="25" selection-end-line="34" selection-end-column="25" />
           <folding>
-            <element signature="e#70#86#0" expanded="true" />
+            <element signature="e#80#89#0" expanded="true" />
+            <marker date="1541281401017" expanded="true" signature="445:513" ph="..." />
+            <marker date="1541281401017" expanded="true" signature="1223:1846" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Omniglot Similarity Conv 28.txt" />
     <entry file="file://$PROJECT_DIR$/Omniglot Similarity.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="55" column="41" selection-start-line="55" selection-start-column="41" selection-end-line="55" selection-end-column="41" />
+        <state relative-caret-position="228">
+          <caret line="12" column="75" selection-start-line="12" selection-start-column="75" selection-end-line="12" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/helper/losses_similarity.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="485">
+          <caret line="47" column="64" selection-start-line="47" selection-start-column="64" selection-end-line="47" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/omniglot_basic_similarity_model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="21" column="64" selection-start-line="21" selection-start-column="64" selection-end-line="21" selection-end-column="64" />
+          <folding>
+            <element signature="e#163#175#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/helper/prepare_triplets.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="11" selection-start-line="11" selection-end-line="12" />
+          <folding>
+            <marker date="1541180384313" expanded="true" signature="6009:6014" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/omniglot_similarity_hps.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="353">
-          <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="41" />
+        <state relative-caret-position="465">
+          <caret line="27" column="25" lean-forward="true" selection-start-line="27" selection-start-column="25" selection-end-line="27" selection-end-column="25" />
           <folding>
             <element signature="e#124#151#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/omniglot_basic_similarity_conv_model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="21" column="54" lean-forward="true" selection-start-line="21" selection-start-column="54" selection-end-line="21" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Omniglot Similarity Conv.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="526">
+          <caret line="76" lean-forward="true" selection-start-line="76" selection-end-line="76" />
         </state>
       </provider>
     </entry>

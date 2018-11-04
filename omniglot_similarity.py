@@ -4,19 +4,20 @@ Trains a simple quadruplet cross-digit encoder on ominglot.
 
 from data.omniglot import *
 from helper.prepare_triplets import *
-from models.omniglot_basic_similarity_model import *
+from models.omniglot_basic_similarity_conv_model import *
 from helper.losses_similarity import *
+from keras.optimizers import rmsprop
 
-input_shape = (105, 105, 1)
-input_length = 105 * 105
-embedding_length = 20
+input_shape = (28, 28, 1)
+input_length = 28 * 28
+embedding_length = 64
 
 epochs = 100
 samples_per_epoch = 1000
 batch_size = 20
 number_test_samples = 2000
 
-losses = Losses(input_length, embedding_length, decoder_factor=0)
+losses = Losses(input_length, embedding_length, decoder_factor=1.5)
 
 data = load_background_data()
 grouped_data = prepare_grouped_data_for_keras(data)
@@ -24,8 +25,8 @@ data_train, data_test = split_list(grouped_data, 0.7)
 
 
 def train_model():
-    model = build_model(input_shape, embedding_length)
-    model.compile('adam', losses.quadruplet_loss, metrics=[losses.quadruplet_metric])
+    model = build_model(input_shape)
+    model.compile("adam", losses.quadruplet_loss, metrics=[losses.quadruplet_metric])
 
     for e in range(epochs):
         for b in range(samples_per_epoch // batch_size):

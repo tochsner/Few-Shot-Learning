@@ -5,15 +5,16 @@ Downloads the omniglot dataset and prepares it for the use with keras.
 import os
 import numpy as np
 from skimage.io import imread
+from scipy.misc import imresize
 
 background_set_path = "C:/Users/tobia/Documents/Programmieren/AI/omniglot/images_background/images_background"
 evaluation_set_path = "C:/Users/tobia/Documents/Programmieren/AI/omniglot/images_evaluation/images_evaluation"
 
-img_rows = 105
-img_cols = 105
+img_rows = 28
+img_cols = 28
 
 def load_image(path):
-    return 1 - (imread(path) / 256)
+    return 1 - imresize(imread(path), (img_rows, img_cols)) / 256
 
 """
 Loads the omniglot dataset.
