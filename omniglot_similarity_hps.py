@@ -15,7 +15,7 @@ hp_search = HyperparameterSearch("Omniglot Similarity Conv")
 input_shape = (28, 28, 1)
 input_length = 784
 
-epochs = 50
+epochs = 100
 samples_per_epoch = 1000
 number_test_samples = 2000
 
@@ -44,7 +44,7 @@ def train_model(param):
 
 parameter = {"batch_size": [30],
              "decoder_factor": [0.5, 0.75],
-             "optimizer": [adam, nadam, rmsprop, sgd],
-             "lr": [0.0001, 0.003, 0.001, 0.003, 0.01, 0.03, 0.1, 0.3]}
+             "optimizer": [adam, nadam],
+             "lr": [0.0001, 0.003, 0.001, 0.003, 0.01, 0.03, 0.1]}
 
 hp_search.scan(train_model, parameter, 1)

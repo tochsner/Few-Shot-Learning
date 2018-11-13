@@ -25,6 +25,30 @@ def group_data(data):
 
 
 """
+Samples a list of trios of two in-label samples and one out-label sample.
+"""
+def createTrios(grouped_data, num_samples):
+    num_classes = len(grouped_data)
+
+    indexes = list(range(num_classes))
+
+    trios = []
+
+    for sample in range(num_samples):
+        main_index = random.choice(indexes)
+        second_index = random.choice([index for index in indexes if index != main_index])
+
+        main_sample1 = random.choice(grouped_data[main_index])
+        main_sample2 = random.choice(grouped_data[main_index])
+        second_sample = random.choice(grouped_data[second_index])
+
+        trio = np.array([main_sample1, main_sample2, second_sample])
+
+        trios.append(trio)
+
+    return trios
+
+"""
 Generates input and output pairs for performing similarity learning with Keras.
 Based on quadruplet-selection.
 Output format of the Keras model: Embedding ; Output (Flatten)
@@ -132,6 +156,13 @@ Output format of the Keras model: Embedding ; Output (Flatten)
 """
 def get_embedding(output, embedding_lenght):
     return output[:embedding_lenght]
+"""
+Returns the decoder output.
+Output format of the Keras model: Embedding ; Output (Flatten)
+"""
+def get_decoder_output(output, embedding_lenght):
+    return output[embedding_lenght:]
+
 
 """
 Splits the list into two sublists with ratio r.

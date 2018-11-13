@@ -14,11 +14,11 @@ def build_model(input_shape, embedding_dimensions):
     input_layer = Input(shape=input_shape)
     dense = Flatten()(input_layer)
     dense = Dense(400, activation='relu')(dense)
-    dense = Dense(200, activation='relu')(dense)
+    dense = Dense(400, activation='relu')(dense)
 
     encoder_output_layer = Dense(embedding_dimensions, activation='sigmoid')(dense)
     
-    decoder_dense = Dense(200, activation='relu')(encoder_output_layer)
+    decoder_dense = Dense(400, activation='relu')(encoder_output_layer)
     decoder_dense = Dense(400, activation='relu')(decoder_dense)
     decoder_output_layer = Dense(output_length, activation='sigmoid')(decoder_dense)
 

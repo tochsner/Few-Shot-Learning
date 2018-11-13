@@ -6,27 +6,29 @@ from data.omniglot import *
 from helper.prepare_triplets import *
 from models.omniglot_basic_similarity_conv_model import *
 from helper.losses_similarity import *
-from keras.optimizers import rmsprop
+from keras.optimizers import nadam
 
-input_shape = (28, 28, 1)
-input_length = 28 * 28
-embedding_length = 64
+input_shape = (35, 35, 1)
+input_length = 35 * 35
+embedding_length = 32
 
-epochs = 100
+epochs = 300
 samples_per_epoch = 1000
-batch_size = 20
+batch_size = 32
 number_test_samples = 2000
 
-losses = Losses(input_length, embedding_length, decoder_factor=1.5)
+optimizer = nadam(0.001)
+
+losses = Losses(input_length, embedding_length, decoder_factor=0.75)
 
 data = load_background_data()
-grouped_data = prepare_grouped_data_for_keras(data)
-data_train, data_test = split_list(grouped_data, 0.7)
+data_train, data_test = split_list(data, 0.8)
+data_train, data_test = prepare_grouped_data_for_keras(data_train), prepare_grouped_data_for_keras(data_test)
 
 
-def train_model():
+def train_model(run_number=0):
     model = build_model(input_shape)
-    model.compile("adam", losses.quadruplet_loss, metrics=[losses.quadruplet_metric])
+    model.compile(optimizer, losses.quadruplet_loss, metrics=[losses.quadruplet_metric])
 
     for e in range(epochs):
         for b in range(samples_per_epoch // batch_size):
@@ -34,7 +36,10 @@ def train_model():
             model.fit(x_train, y_train, epochs=1, verbose=0)
 
         (x_test, y_test) = createTrainingDataForQuadrupletLoss(model, data_test, number_test_samples, embedding_length)
-        print(model.evaluate(x_test, y_test, verbose=0)[1])
+        print(model.evaluate(x_test, y_test, verbose=0)[1], flush=True)
+
+    model.save_weights("saved_models/omniglot_verification " + str(run_number))
 
 
-train_model()
+for i in range(10):
+    train_model(i)

@@ -10,8 +10,8 @@ from scipy.misc import imresize
 background_set_path = "C:/Users/tobia/Documents/Programmieren/AI/omniglot/images_background/images_background"
 evaluation_set_path = "C:/Users/tobia/Documents/Programmieren/AI/omniglot/images_evaluation/images_evaluation"
 
-img_rows = 28
-img_cols = 28
+img_rows = 35
+img_cols = 35
 
 def load_image(path):
     return 1 - imresize(imread(path), (img_rows, img_cols)) / 256
