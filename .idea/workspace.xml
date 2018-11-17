@@ -2,18 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e00c8425-6c7f-43a0-adb4-72fc4689ae11" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/MNIST_generative.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/MNIST_conv_similarity_model.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/omniglot_evaluate_verification_performance.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Omniglot Similarity Conv.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Omniglot Similarity Conv.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/omniglot.py" beforeDir="false" afterPath="$PROJECT_DIR$/data/omniglot.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/helper/prepare_triplets.py" beforeDir="false" afterPath="$PROJECT_DIR$/helper/prepare_triplets.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/MNIST_basic_similarity_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/MNIST_basic_similarity_model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/omniglot_basic_similarity_conv_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/omniglot_basic_similarity_conv_model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/omniglot_basic_similarity_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/omniglot_basic_similarity_model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/omniglot_similarity.py" beforeDir="false" afterPath="$PROJECT_DIR$/omniglot_similarity.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/omniglot_similarity_hps.py" beforeDir="false" afterPath="$PROJECT_DIR$/omniglot_similarity_hps.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MNIST_Hebbian.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MNIST_similarity.py" beforeDir="false" afterPath="$PROJECT_DIR$/MNIST_similarity.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Omniglot Similarity Conv.txt" beforeDir="false" afterPath="$PROJECT_DIR$/results/Omniglot Similarity Conv.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Omniglot Similarity.txt" beforeDir="false" afterPath="$PROJECT_DIR$/results/Omniglot Similarity.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/saved_models/211018 MNIST Similarity Mine 01" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saved_models/211018 MNIST Similarity Mine 010" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saved_models/211018 MNIST Similarity Mine 02" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saved_models/211018 MNIST Similarity Mine 03" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saved_models/211018 MNIST Similarity Mine 04" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saved_models/211018 MNIST Similarity Mine 05" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saved_models/211018 MNIST Similarity Mine 06" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saved_models/211018 MNIST Similarity Mine 07" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saved_models/211018 MNIST Similarity Mine 08" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saved_models/211018 MNIST Similarity Mine 09" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/talos.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,38 +30,40 @@
     <session id="-231381463">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="22" />
+          <entry key="project.closed" value="24" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.1" value="7" />
           <entry key="project.open.time.10" value="2" />
           <entry key="project.open.time.11" value="2" />
           <entry key="project.open.time.12" value="1" />
           <entry key="project.open.time.13" value="1" />
+          <entry key="project.open.time.16" value="1" />
           <entry key="project.open.time.21" value="1" />
-          <entry key="project.open.time.22" value="1" />
+          <entry key="project.open.time.22" value="2" />
           <entry key="project.open.time.24" value="1" />
           <entry key="project.open.time.5" value="1" />
           <entry key="project.open.time.7" value="1" />
           <entry key="project.open.time.8" value="1" />
           <entry key="project.open.time.9" value="2" />
-          <entry key="project.opened" value="22" />
+          <entry key="project.opened" value="24" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="42" />
-          <entry key="py" value="8792" />
+          <entry key="py" value="8795" />
           <entry key="txt" value="15" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="57" />
-          <entry key="Python" value="8792" />
+          <entry key="Python" value="8795" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
+          <entry key="csv" value="1" />
           <entry key="log" value="1" />
           <entry key="py" value="95" />
           <entry key="txt" value="25" />
@@ -64,7 +71,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="PLAIN_TEXT" value="26" />
+          <entry key="PLAIN_TEXT" value="27" />
           <entry key="Python" value="95" />
         </counts>
       </usages-collector>
@@ -96,14 +103,14 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/MNIST_similarity.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="437">
-              <caret line="27" column="17" selection-start-line="27" selection-start-column="17" selection-end-line="27" selection-end-column="17" />
+            <state relative-caret-position="247">
+              <caret line="17" column="12" lean-forward="true" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Omniglot Similarity.txt">
+        <entry file="file://$PROJECT_DIR$/results/Omniglot Similarity.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="57">
               <caret line="3" column="119" selection-start-line="3" selection-start-column="119" selection-end-line="3" selection-end-column="119" />
@@ -193,7 +200,6 @@
         <option value="$PROJECT_DIR$/helper/losses_similarity.py" />
         <option value="$PROJECT_DIR$/omniglot_similarity_hps.py" />
         <option value="$PROJECT_DIR$/data/omniglot.py" />
-        <option value="$PROJECT_DIR$/MNIST_similarity.py" />
         <option value="$PROJECT_DIR$/MNIST-generator.py" />
         <option value="$PROJECT_DIR$/helper/prepare_triplets.py" />
         <option value="$PROJECT_DIR$/models/MNIST_basic_similarity_model.py" />
@@ -204,6 +210,7 @@
         <option value="$PROJECT_DIR$/omniglot_similarity.py" />
         <option value="$PROJECT_DIR$/models/omniglot_basic_similarity_conv_model.py" />
         <option value="$PROJECT_DIR$/omniglot_evaluate_verification_performance.py" />
+        <option value="$PROJECT_DIR$/MNIST_similarity.py" />
       </list>
     </option>
   </component>
@@ -236,21 +243,6 @@
               <item name="Few-Shot-Learning" type="b2602c69:ProjectViewProjectNode" />
               <item name="Few-Shot-Learning" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="Few-Shot-Learning" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Few-Shot-Learning" type="462c0819:PsiDirectoryNode" />
-              <item name="helper" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Few-Shot-Learning" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Few-Shot-Learning" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Few-Shot-Learning" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Few-Shot-Learning" type="462c0819:PsiDirectoryNode" />
-              <item name="saved_models" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -272,6 +264,9 @@
     </option>
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\tobia\Documents\Programmieren\AI\Few-Shot-Learning\results" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\tobia\Documents\Programmieren\AI\Few-Shot-Learning\models" />
       <recent name="C:\Users\tobia\Documents\Programmieren\AI\Few-Shot-Learning" />
@@ -741,7 +736,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Omniglot Similarity Conv.txt">
+    <entry file="file://$PROJECT_DIR$/results/Omniglot Similarity Conv.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="114">
           <caret line="6" column="150" lean-forward="true" selection-start-line="6" selection-start-column="150" selection-end-line="6" selection-end-column="150" />
@@ -772,7 +767,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Omniglot Similarity.txt">
+    <entry file="file://$PROJECT_DIR$/results/Omniglot Similarity.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="57">
           <caret line="3" column="119" selection-start-line="3" selection-start-column="119" selection-end-line="3" selection-end-column="119" />
@@ -803,10 +798,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/results/101918223125 results talos one hidden layer.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/MNIST_similarity.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="27" column="17" selection-start-line="27" selection-start-column="17" selection-end-line="27" selection-end-column="17" />
+        <state relative-caret-position="247">
+          <caret line="17" column="12" lean-forward="true" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
         </state>
       </provider>
     </entry>
