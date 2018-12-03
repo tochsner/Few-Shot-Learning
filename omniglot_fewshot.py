@@ -1,5 +1,5 @@
 """
-Trains a simple quadruplet cross-digit encoder on ominglot.
+Trains a simple quadruplet cross-digit encoder on n-way k-shot few-shot-learning on ominglot.
 """
 
 from data.omniglot import *
@@ -8,14 +8,17 @@ from models.omniglot_basic_similarity_conv_model import *
 from helper.losses_similarity import *
 from keras.optimizers import nadam
 
+k = 1
+n = 5
+
 input_shape = (35, 35, 1)
 input_length = 35 * 35
 embedding_length = 32
 
 epochs = 300
-samples_per_epoch = 1000
-batch_size = 32
-number_test_samples = 50
+tasks_per_epoch = 30
+batch_size = 8
+test_tasks_per_epoch = 20
 
 optimizer = nadam(0.001)
 
@@ -26,26 +29,10 @@ data_train, data_test = split_list(data, 0.8)
 data_train, data_test = prepare_grouped_data_for_keras(data_train), prepare_grouped_data_for_keras(data_test)
 
 
-def train_model(run_number=0):
-    model = build_model(input_shape)
-    model.compile(optimizer, losses.quadruplet_loss, metrics=[losses.quadruplet_metric])
-
-    for e in range(epochs):
-        for b in range(samples_per_epoch // batch_size):
-            (x_train, y_train) = createTrainingDataForQuadrupletLoss(model, data_train, batch_size, embedding_length)
-            model.fit(x_train, y_train, epochs=1, verbose=0)
-
-        print(calculate_k_shot_accuracy(model), flush=True)
-
-    model.save_weights("saved_models/omniglot_verification " + str(run_number))
-
-
 def calculate_k_shot_accuracy(model):
-    n = 5
-    k = 1
     tests = 0
     accuracy = 0
-    for t in range(number_test_samples):
+    for t in range(test_tasks_per_epoch):
         prototypes = []
         test_data = sample_data_for_n_way_k_shot(data_test, n, k + 15)
         support_set = [x[:k] for x in test_data]
@@ -68,5 +55,19 @@ def calculate_k_shot_accuracy(model):
     return accuracy / max(1, tests)
 
 
-for i in range(10):
-    train_model(i)
+def train_model(run_number=0):
+    model = build_model(input_shape)
+    model.compile(optimizer, losses.quadruplet_loss, metrics=[losses.quadruplet_metric])
+
+    for e in range(epochs):
+        for t in range(tasks_per_epoch):
+            task_samples = sample_data_for_n_way_k_shot(data_train, n, k)
+            (x_train, y_train) = createTrainingDataForQuadrupletLoss(model, task_samples, batch_size, embedding_length)
+            model.fit(x_train, y_train, epochs=1, verbose=0)
+
+        test_accuracy = calculate_k_shot_accuracy(model)
+        print(test_accuracy, flush=True)
+
+    model.save_weights("saved_models/omniglot_verification " + str(run_number))
+
+train_model()

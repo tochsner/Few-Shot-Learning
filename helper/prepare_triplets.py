@@ -138,13 +138,15 @@ def createTrainingDataForQuadrupletLoss(model, grouped_data, num_samples, embedd
     return (x_data, y_data)
 
 """
-Randomly chooses k samples per classes for few-shot-learning
+Randomly chooses k samples from n classes for few-shot-learning
 """
-def sample_data_for_k_shot(grouped_data, k):
-    num_classes = len(grouped_data)
+def sample_data_for_n_way_k_shot(grouped_data, n, k):
+    num_classes = list(range(len(grouped_data)))
     sampled_grouped_data = []
 
-    for c in range(num_classes):
+    random.shuffle(num_classes)
+
+    for c in num_classes[:n]:
         np.random.shuffle(grouped_data[c])
         sampled_grouped_data.append(grouped_data[c][:k])
 

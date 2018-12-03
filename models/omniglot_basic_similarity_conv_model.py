@@ -22,7 +22,7 @@ def build_model(input_shape):
     conv = Conv2D(64, (3, 3), activation="relu")(conv)
     conv = BatchNormalization()(conv)
     conv = MaxPooling2D((2, 2))(conv)
-    conv = Conv2D(128, (3, 3), activation="relu")(conv)
+    conv = Conv2D(64, (3, 3), activation="relu")(conv)
     conv = BatchNormalization()(conv)
     conv = MaxPooling2D((2, 2))(conv)
     flatten = Flatten()(conv)

@@ -2,23 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e00c8425-6c7f-43a0-adb4-72fc4689ae11" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/omniglot_evaluate_kshot_performance.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/omniglot_fewshot.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MNIST_Hebbian.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MNIST_similarity.py" beforeDir="false" afterPath="$PROJECT_DIR$/MNIST_similarity.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Omniglot Similarity Conv.txt" beforeDir="false" afterPath="$PROJECT_DIR$/results/Omniglot Similarity Conv.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Omniglot Similarity.txt" beforeDir="false" afterPath="$PROJECT_DIR$/results/Omniglot Similarity.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/saved_models/211018 MNIST Similarity Mine 01" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/saved_models/211018 MNIST Similarity Mine 010" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/saved_models/211018 MNIST Similarity Mine 02" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/saved_models/211018 MNIST Similarity Mine 03" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/saved_models/211018 MNIST Similarity Mine 04" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/saved_models/211018 MNIST Similarity Mine 05" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/saved_models/211018 MNIST Similarity Mine 06" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/saved_models/211018 MNIST Similarity Mine 07" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/saved_models/211018 MNIST Similarity Mine 08" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/saved_models/211018 MNIST Similarity Mine 09" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/talos.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/helper/prepare_triplets.py" beforeDir="false" afterPath="$PROJECT_DIR$/helper/prepare_triplets.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/omniglot_basic_similarity_conv_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/omniglot_basic_similarity_conv_model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/omniglot_similarity.py" beforeDir="false" afterPath="$PROJECT_DIR$/omniglot_similarity.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -30,60 +19,67 @@
     <session id="-231381463">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="24" />
+          <entry key="project.closed" value="29" />
           <entry key="project.open.time.0" value="1" />
-          <entry key="project.open.time.1" value="7" />
+          <entry key="project.open.time.1" value="8" />
           <entry key="project.open.time.10" value="2" />
-          <entry key="project.open.time.11" value="2" />
-          <entry key="project.open.time.12" value="1" />
+          <entry key="project.open.time.11" value="3" />
+          <entry key="project.open.time.12" value="2" />
           <entry key="project.open.time.13" value="1" />
           <entry key="project.open.time.16" value="1" />
+          <entry key="project.open.time.17" value="1" />
           <entry key="project.open.time.21" value="1" />
           <entry key="project.open.time.22" value="2" />
           <entry key="project.open.time.24" value="1" />
+          <entry key="project.open.time.25" value="1" />
           <entry key="project.open.time.5" value="1" />
           <entry key="project.open.time.7" value="1" />
           <entry key="project.open.time.8" value="1" />
           <entry key="project.open.time.9" value="2" />
-          <entry key="project.opened" value="24" />
+          <entry key="project.opened" value="29" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="42" />
-          <entry key="py" value="8795" />
-          <entry key="txt" value="15" />
+          <entry key="py" value="12271" />
+          <entry key="txt" value="21" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="57" />
-          <entry key="Python" value="8795" />
+          <entry key="PLAIN_TEXT" value="63" />
+          <entry key="Python" value="9818" />
+          <entry key="Scratch" value="2453" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="csv" value="1" />
           <entry key="log" value="1" />
-          <entry key="py" value="95" />
+          <entry key="py" value="152" />
           <entry key="txt" value="25" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="PLAIN_TEXT" value="27" />
-          <entry key="Python" value="95" />
+          <entry key="Python" value="119" />
+          <entry key="Scratch" value="33" />
         </counts>
       </usages-collector>
     </session>
   </component>
+  <component name="FavoritesManager">
+    <favorites_list name="Few-Shot-Learning" />
+  </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+    <leaf>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/omniglot_similarity.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="23" column="20" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="20" />
+            <state relative-caret-position="568">
+              <caret line="45" column="13" selection-start-line="45" selection-start-column="13" selection-end-line="45" selection-end-column="13" />
               <folding>
                 <element signature="e#69#96#0" expanded="true" />
               </folding>
@@ -94,56 +90,72 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/omniglot_evaluate_verification_performance.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="665">
-              <caret line="38" column="22" selection-start-line="38" selection-start-column="22" selection-end-line="38" selection-end-column="22" />
+            <state relative-caret-position="551">
+              <caret line="29" selection-start-line="29" selection-end-line="29" />
+              <folding>
+                <element signature="e#84#141#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/omniglot_evaluate_kshot_performance.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="361">
+              <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_3.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="646">
+              <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
+              <folding>
+                <marker date="1543838118893" expanded="true" signature="169:170" ph="..." />
+                <marker date="1543838118893" expanded="true" signature="169:750" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/MNIST_few_shot.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="399">
+              <caret line="25" column="35" selection-start-line="25" selection-start-column="35" selection-end-line="25" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/helper/prepare_triplets.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2679">
+              <caret line="144" column="29" selection-start-line="144" selection-start-column="29" selection-end-line="144" selection-end-column="29" />
+              <folding>
+                <marker date="1543564932451" expanded="true" signature="6952:6957" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_2.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="15" selection-start-line="15" selection-end-line="15" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/MNIST_similarity.py">
+        <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_1.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="17" column="12" lean-forward="true" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/results/Omniglot Similarity.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="57">
-              <caret line="3" column="119" selection-start-line="3" selection-start-column="119" selection-end-line="3" selection-end-column="119" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data/omniglot.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
-              <caret line="24" selection-start-line="24" selection-end-line="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/models/omniglot_basic_similarity_conv_model.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="494">
-              <caret line="32" column="64" selection-start-line="32" selection-start-column="64" selection-end-line="32" selection-end-column="64" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/models/omniglot_basic_similarity_model.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="20" column="58" selection-start-line="20" selection-start-column="58" selection-end-line="20" selection-end-column="58" />
-              <folding>
-                <element signature="e#163#175#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="171">
+              <caret line="9" column="43" lean-forward="true" selection-start-line="9" selection-start-column="43" selection-end-line="9" selection-end-column="43" />
             </state>
           </provider>
         </entry>
@@ -164,6 +176,7 @@
       <find>0.85</find>
       <find>\Users\tobia\Documents\Programmieren\AI\Few-Shot-Learning\saved_models\211018 MNIST Similari</find>
       <find>\</find>
+      <find>num_trios</find>
     </findStrings>
     <replaceStrings>
       <replace>/</replace>
@@ -201,24 +214,29 @@
         <option value="$PROJECT_DIR$/omniglot_similarity_hps.py" />
         <option value="$PROJECT_DIR$/data/omniglot.py" />
         <option value="$PROJECT_DIR$/MNIST-generator.py" />
-        <option value="$PROJECT_DIR$/helper/prepare_triplets.py" />
         <option value="$PROJECT_DIR$/models/MNIST_basic_similarity_model.py" />
         <option value="$PROJECT_DIR$/models/MNIST_conv_similarity_model.py" />
         <option value="$PROJECT_DIR$/MNIST_generative.py" />
         <option value="$PROJECT_DIR$/MNIST_generator.py" />
         <option value="$PROJECT_DIR$/models/omniglot_basic_similarity_model.py" />
+        <option value="$PROJECT_DIR$/MNIST_similarity.py" />
+        <option value="$PROJECT_DIR$/helper/prepare_triplets.py" />
+        <option value="$PROJECT_DIR$/omniglot_fewshot.py" />
         <option value="$PROJECT_DIR$/omniglot_similarity.py" />
+        <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch.py" />
+        <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_2.py" />
         <option value="$PROJECT_DIR$/models/omniglot_basic_similarity_conv_model.py" />
         <option value="$PROJECT_DIR$/omniglot_evaluate_verification_performance.py" />
-        <option value="$PROJECT_DIR$/MNIST_similarity.py" />
+        <option value="$PROJECT_DIR$/omniglot_evaluate_kshot_performance.py" />
+        <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_3.py" />
+        <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_1.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-10" />
-    <option name="y" value="-10" />
     <option name="width" value="1145" />
-    <option name="height" value="735" />
+    <option name="height" value="1465" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -236,6 +254,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -243,15 +262,40 @@
               <item name="Few-Shot-Learning" type="b2602c69:ProjectViewProjectNode" />
               <item name="Few-Shot-Learning" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Few-Shot-Learning" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Few-Shot-Learning" type="462c0819:PsiDirectoryNode" />
+              <item name="helper" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Few-Shot-Learning" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Few-Shot-Learning" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Few-Shot-Learning" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Few-Shot-Learning" type="462c0819:PsiDirectoryNode" />
+              <item name="saved_models" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Few-Shot-Learning" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Scratches and Consoles" type="1a2a3e82:ScratchProjectViewPane$MyProjectNode" />
+            </path>
+            <path>
+              <item name="Few-Shot-Learning" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Scratches and Consoles" type="1a2a3e82:ScratchProjectViewPane$MyProjectNode" />
+              <item name="Scratches" type="d62648e6:ScratchProjectViewPane$MyRootNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SearchEverywhereHistoryKey" value="plugins&#9;ACTION&#9;WelcomeScreen.Plugins" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="Python" />
+    <property name="full.screen.before.presentation.mode" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../MNIST" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Language Defaults" />
   </component>
@@ -268,8 +312,8 @@
       <recent name="C:\Users\tobia\Documents\Programmieren\AI\Few-Shot-Learning\results" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\tobia\Documents\Programmieren\AI\Few-Shot-Learning\models" />
       <recent name="C:\Users\tobia\Documents\Programmieren\AI\Few-Shot-Learning" />
+      <recent name="C:\Users\tobia\Documents\Programmieren\AI\Few-Shot-Learning\models" />
       <recent name="C:\Users\tobia\Documents\Programmieren\AI\Few-Shot-Learning\data" />
     </key>
   </component>
@@ -285,49 +329,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.omniglot_evaluate_verification_performance">
-    <configuration name="MNIST_classification" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="Few-Shot-Learning" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/MNIST_classification.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="MNIST_few_shot" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="Few-Shot-Learning" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/MNIST_few_shot.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python.scratch_1">
     <configuration name="MNIST_generative" type="PythonConfigurationType" factoryName="Python">
       <module name="Few-Shot-Learning" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -412,6 +414,27 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="omniglot_evaluate_kshot_performance" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Few-Shot-Learning" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/omniglot_evaluate_kshot_performance.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="omniglot_evaluate_verification_performance" type="PythonConfigurationType" factoryName="Python">
       <module name="Few-Shot-Learning" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -425,6 +448,27 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/omniglot_evaluate_verification_performance.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="omniglot_fewshot" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Few-Shot-Learning" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/omniglot_fewshot.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -475,7 +519,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="scratch" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Few-Shot-Learning" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -483,11 +527,53 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="WORKING_DIRECTORY" value="$APPLICATION_CONFIG_DIR$/scratches" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test.py" />
+      <option name="SCRIPT_NAME" value="$APPLICATION_CONFIG_DIR$/scratches/scratch.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="scratch_1" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Few-Shot-Learning" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$APPLICATION_CONFIG_DIR$/scratches" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$APPLICATION_CONFIG_DIR$/scratches/scratch_1.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="scratch_3" type="PythonConfigurationType" factoryName="Python">
+      <module name="Few-Shot-Learning" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$APPLICATION_CONFIG_DIR$/scratches" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$APPLICATION_CONFIG_DIR$/scratches/scratch_3.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -504,15 +590,18 @@
       <item itemvalue="Python.omniglot_evaluate_verification_performance" />
       <item itemvalue="Python.MNIST_generator" />
       <item itemvalue="Python.MNIST_generative" />
-      <item itemvalue="Python.MNIST_classification" />
-      <item itemvalue="Python.MNIST_few_shot" />
-      <item itemvalue="Python.test" />
+      <item itemvalue="Python.scratch_3" />
+      <item itemvalue="Python.omniglot_fewshot" />
+      <item itemvalue="Python.scratch" />
+      <item itemvalue="Python.scratch_1" />
+      <item itemvalue="Python.omniglot_evaluate_kshot_performance" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.test" />
-        <item itemvalue="Python.MNIST_few_shot" />
-        <item itemvalue="Python.MNIST_classification" />
+        <item itemvalue="Python.scratch_1" />
+        <item itemvalue="Python.omniglot_evaluate_kshot_performance" />
+        <item itemvalue="Python.scratch" />
+        <item itemvalue="Python.omniglot_fewshot" />
       </list>
     </recent_temporary>
   </component>
@@ -532,18 +621,18 @@
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1819" height="1178" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19865319" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15207632" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info id="Favorites" order="2" side_tool="true" weight="0.32963988" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3291866" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49943882" weight="0.38564593" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49943882" weight="0.23636363" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.3291866" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.3291866" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.37416267" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5005612" side_tool="true" weight="0.38564593" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.3291866" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -561,23 +650,37 @@
       </list>
     </option>
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/helper/prepare_triplets.py</url>
-          <line>163</line>
-          <option name="timeStamp" value="38" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/omniglot_evaluate_verification_performance.py</url>
-          <line>4</line>
-          <option name="timeStamp" value="39" />
-        </line-breakpoint>
-      </breakpoints>
       <default-breakpoints>
         <breakpoint type="python-exception">
           <properties notifyOnTerminate="true" exception="BaseException">
@@ -617,13 +720,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MNIST_few_shot.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="562">
-          <caret line="37" column="13" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/MNIST_classification.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
@@ -631,13 +727,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="3" column="36" lean-forward="true" selection-start-line="3" selection-start-column="36" selection-end-line="3" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/test.py" />
     <entry file="file://$PROJECT_DIR$/data/MNIST.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="123">
@@ -655,9 +745,7 @@
     <entry file="file://$PROJECT_DIR$/helper/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/talos.log">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/talos.log" />
     <entry file="file://$PROJECT_DIR$/helper/hyperparameter_search.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
@@ -726,16 +814,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/MNIST_generator.py" />
-    <entry file="file://$PROJECT_DIR$/helper/prepare_triplets.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
-          <caret line="164" lean-forward="true" selection-start-line="164" selection-end-line="164" />
-          <folding>
-            <marker date="1541536011546" expanded="true" signature="6897:6902" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/results/Omniglot Similarity Conv.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="114">
@@ -750,22 +828,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/omniglot_similarity.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="23" column="20" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="20" />
-          <folding>
-            <element signature="e#69#96#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/omniglot_evaluate_verification_performance.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="665">
-          <caret line="38" column="22" selection-start-line="38" selection-start-column="22" selection-end-line="38" selection-end-column="22" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/results/101918223125 results talos one hidden layer.csv">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/results/Omniglot Similarity.txt">
       <provider selected="true" editor-type-id="text-editor">
@@ -781,30 +845,117 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/omniglot_basic_similarity_conv_model.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="32" column="64" selection-start-line="32" selection-start-column="64" selection-end-line="32" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/models/omniglot_basic_similarity_model.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="304">
           <caret line="20" column="58" selection-start-line="20" selection-start-column="58" selection-end-line="20" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MNIST_similarity.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Miniconda3/pkgs/pyqt-5.9.2-py36h6538335_2/info/recipe/pyqt_test.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/omniglot_basic_similarity_conv_model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="427">
+          <caret line="38" column="59" selection-start-line="38" selection-start-column="59" selection-end-line="38" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/omniglot_fewshot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="33" column="16" lean-forward="true" selection-start-line="33" selection-start-column="16" selection-end-line="33" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Miniconda3/Lib/site-packages/skimage/io/_plugins/pil_plugin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="428">
+          <caret line="38" column="30" lean-forward="true" selection-start-line="38" selection-start-column="30" selection-end-line="38" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/helper/prepare_triplets.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2679">
+          <caret line="144" column="29" selection-start-line="144" selection-start-column="29" selection-end-line="144" selection-end-column="29" />
           <folding>
-            <element signature="e#163#175#0" expanded="true" />
+            <marker date="1543564932451" expanded="true" signature="6952:6957" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/results/101918223125 results talos one hidden layer.csv">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MNIST_similarity.py">
+    <entry file="file://$PROJECT_DIR$/MNIST_few_shot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="17" column="12" lean-forward="true" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
+        <state relative-caret-position="399">
+          <caret line="25" column="35" selection-start-line="25" selection-start-column="35" selection-end-line="25" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/omniglot_evaluate_kshot_performance.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/omniglot_evaluate_verification_performance.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="551">
+          <caret line="29" selection-start-line="29" selection-end-line="29" />
+          <folding>
+            <element signature="e#84#141#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/omniglot_similarity.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="568">
+          <caret line="45" column="13" selection-start-line="45" selection-start-column="13" selection-end-line="45" selection-end-column="13" />
+          <folding>
+            <element signature="e#69#96#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_3.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
+          <folding>
+            <marker date="1543838118893" expanded="true" signature="169:170" ph="..." />
+            <marker date="1543838118893" expanded="true" signature="169:750" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" column="43" lean-forward="true" selection-start-line="9" selection-start-column="43" selection-end-line="9" selection-end-column="43" />
         </state>
       </provider>
     </entry>
