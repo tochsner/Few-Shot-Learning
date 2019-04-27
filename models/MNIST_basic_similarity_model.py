@@ -3,22 +3,18 @@ Builds a simple convolutional nerual network for MNIST similarity (quadruplet en
 Output format of the Keras model: Embedding ; Output (Flatten)
 """
 
-import keras
 from keras.models import Model
-from keras.models import Sequential
-from keras.layers import Input, Dense, Dropout, Flatten, Reshape
-from keras.layers import Conv2D, MaxPooling2D
+from keras.layers import Input, Dense, Dropout, Flatten
 from keras.layers import Concatenate
-from keras.regularizers import l2
 
-def build_model(input_shape, embedding_dimensions):
+def build_model(input_shape, embedding_length):
     input_layer = Input(shape=input_shape)
     dense = Flatten()(input_layer)
     dense = Dense(200, activation='relu')(dense)
     dense = Dropout(0.25)(dense)
     dense = Dense(200, activation='relu')(dense)
 
-    encoder_output_layer = Dense(embedding_dimensions, activation='sigmoid')(dense)
+    encoder_output_layer = Dense(embedding_length, activation='sigmoid')(dense)
     
     decoder_dense = Dense(200, activation='relu')(encoder_output_layer)
     decoder_dense = Dropout(0.25)(decoder_dense)

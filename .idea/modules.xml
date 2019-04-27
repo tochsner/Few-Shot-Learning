@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/Few-Shot-Learning.iml" filepath="$PROJECT_DIR$/.idea/Few-Shot-Learning.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Genre-Classification/.idea/Genre-Classification.iml" filepath="$PROJECT_DIR$/../Genre-Classification/.idea/Genre-Classification.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../MusicSimilarity/.idea/MusicSimilarity.iml" filepath="$PROJECT_DIR$/../MusicSimilarity/.idea/MusicSimilarity.iml" />
     </modules>
   </component>
 </project>

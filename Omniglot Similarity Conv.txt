@@ -1,0 +1,4 @@
+{'batch_size': 30, 'decoder_factor': 0.25, 'optimizer': <class 'keras.optimizers.SGD'>, 'lr': 0.003} [-0.9318792618645562, 0.4888888888888889]
+{'batch_size': 30, 'decoder_factor': 0.5, 'optimizer': <class 'keras.optimizers.RMSprop'>, 'lr': 0.03} [7.994758894178602, 0.625]
+{'batch_size': 30, 'decoder_factor': 0.75, 'optimizer': <class 'keras.optimizers.Nadam'>, 'lr': 0.03} [17.598022299872504, 0.6044444444444445]
+{'batch_size': 30, 'decoder_factor': 0.25, 'optimizer': <class 'keras.optimizers.RMSprop'>, 'lr': 0.001} [-3.1181252664989896, 0.7827777777777778]

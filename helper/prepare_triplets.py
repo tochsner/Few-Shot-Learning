@@ -54,7 +54,7 @@ Based on quadruplet-selection.
 Output format of the Keras model: Embedding ; Output (Flatten)
 Format of y_train: Target Embedding ; Dissimilar Embedding ; Target Decoder Output
 """
-def createTrainingDataForQuadrupletLoss(model, grouped_data, num_samples, embedding_lenght):  
+def create_training_data_for_quadruplet_loss(model, grouped_data, num_samples, embedding_lenght, mode = 0):
     num_classes = len(grouped_data)
     input_lenght = np.prod(grouped_data[0][0].shape)
 
@@ -69,14 +69,21 @@ def createTrainingDataForQuadrupletLoss(model, grouped_data, num_samples, embedd
     y_data = np.zeros(y_shape)
 
     for sample in range(num_samples // 2):
-        main_index = random.choice(indexes)
-        second_index = random.choice([index for index in indexes if index != main_index])
+        exception = True
 
-        main_sample1 = random.choice(grouped_data[main_index])
-        main_sample2 = random.choice(grouped_data[main_index])
-        second_sample1 = random.choice(grouped_data[second_index])
-        second_sample2 = random.choice(grouped_data[second_index])
-        
+        while exception:
+            try:
+                main_index = random.choice(indexes)
+                second_index = random.choice([index for index in indexes if index != main_index])
+
+                main_sample1 = random.choice(grouped_data[main_index])
+                main_sample2 = random.choice(grouped_data[main_index])
+                second_sample1 = random.choice(grouped_data[second_index])
+                second_sample2 = random.choice(grouped_data[second_index])
+                exception = False
+            except:
+                pass
+
         outputs = model.predict(np.array([main_sample1, main_sample2, second_sample1, second_sample2]))
 
         costs = (losses.get_distance(outputs[0][ : embedding_lenght], outputs[2][ : embedding_lenght]),
@@ -85,6 +92,9 @@ def createTrainingDataForQuadrupletLoss(model, grouped_data, num_samples, embedd
                  losses.get_distance(outputs[1][ : embedding_lenght], outputs[3][ : embedding_lenght]))
 
         argmin = np.argmin(costs)
+
+        if mode == 1:
+            argmin = 0
 
         if argmin == 0:
             # mainSample 1
@@ -157,14 +167,20 @@ Returns the embedding of an output.
 Output format of the Keras model: Embedding ; Output (Flatten)
 """
 def get_embedding(output, embedding_lenght):
-    return output[:embedding_lenght]
+    if len(output.shape) == 1:
+        return output[:embedding_lenght]
+    else:
+        return output[:,:embedding_lenght]
+
 """
 Returns the decoder output.
 Output format of the Keras model: Embedding ; Output (Flatten)
 """
 def get_decoder_output(output, embedding_lenght):
-    return output[embedding_lenght:]
-
+    if len(output.shape) == 1:
+        return output[embedding_lenght:]
+    else:
+        return output[:, embedding_lenght:]
 
 """
 Splits the list into two sublists with ratio r.

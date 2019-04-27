@@ -32,15 +32,15 @@ def train_model():
 
     for e in range(epochs):
         for b in range(samples_per_epoch // batch_size):
-            (x_train, y_train) = createTrainingDataForQuadrupletLoss(model, data_train, batch_size, embedding_lenght)
+            (x_train, y_train) = create_training_data_for_quadruplet_loss(model, data_train, batch_size, embedding_lenght)
             model.fit(x_train, y_train, epochs=1, verbose=0)
 
-        (x_test, y_test) = createTrainingDataForQuadrupletLoss(model, data_test, number_test_samples, embedding_lenght)
+        (x_test, y_test) = create_training_data_for_quadruplet_loss(model, data_test, number_test_samples, embedding_lenght)
         print(model.evaluate(x_test, y_test, verbose=0)[1])
 
-    (x_train, y_train) = createTrainingDataForQuadrupletLoss(model, data_train, number_test_samples * 5,
-                                                             embedding_lenght)
-    (x_test, y_test) = createTrainingDataForQuadrupletLoss(model, data_test, number_test_samples, embedding_lenght)
+    (x_train, y_train) = create_training_data_for_quadruplet_loss(model, data_train, number_test_samples * 5,
+                                                                  embedding_lenght)
+    (x_test, y_test) = create_training_data_for_quadruplet_loss(model, data_test, number_test_samples, embedding_lenght)
     print("Model " + " Training-Accuracy:" + str(model.evaluate(x_train, y_train, verbose=0)[1]))
     print("Model " + " Test-Accuracy:" + str(model.evaluate(x_test, y_test, verbose=0)[1]))
 

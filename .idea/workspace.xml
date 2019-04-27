@@ -2,7 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e00c8425-6c7f-43a0-adb4-72fc4689ae11" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/Few-Shot-Learning.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Few-Shot-Learning.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/tobia.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/tobia.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MNIST_few_shot.py" beforeDir="false" afterPath="$PROJECT_DIR$/MNIST_few_shot.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MNIST_generative.py" beforeDir="false" afterPath="$PROJECT_DIR$/MNIST_generative.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MNIST_similarity.py" beforeDir="false" afterPath="$PROJECT_DIR$/MNIST_similarity.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MNIST_similarity_talos.py" beforeDir="false" afterPath="$PROJECT_DIR$/MNIST_similarity_talos.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helper/prepare_triplets.py" beforeDir="false" afterPath="$PROJECT_DIR$/helper/prepare_triplets.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/MNIST_basic_similarity_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/MNIST_basic_similarity_model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/omniglot_fewshot.py" beforeDir="false" afterPath="$PROJECT_DIR$/omniglot_fewshot.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/omniglot_similarity.py" beforeDir="false" afterPath="$PROJECT_DIR$/omniglot_similarity.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/omniglot_similarity_hps.py" beforeDir="false" afterPath="$PROJECT_DIR$/omniglot_similarity_hps.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MusicSimilarity/t.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../MusicSimilarity/t.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,37 +28,38 @@
     <session id="-231381463">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="38" />
+          <entry key="project.closed" value="43" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.1" value="8" />
-          <entry key="project.open.time.10" value="4" />
+          <entry key="project.open.time.10" value="5" />
           <entry key="project.open.time.11" value="4" />
           <entry key="project.open.time.12" value="2" />
-          <entry key="project.open.time.13" value="2" />
-          <entry key="project.open.time.16" value="1" />
+          <entry key="project.open.time.13" value="3" />
+          <entry key="project.open.time.15" value="1" />
+          <entry key="project.open.time.16" value="2" />
           <entry key="project.open.time.17" value="1" />
           <entry key="project.open.time.21" value="1" />
           <entry key="project.open.time.22" value="2" />
           <entry key="project.open.time.24" value="1" />
           <entry key="project.open.time.25" value="3" />
           <entry key="project.open.time.5" value="1" />
-          <entry key="project.open.time.7" value="1" />
+          <entry key="project.open.time.7" value="2" />
           <entry key="project.open.time.8" value="1" />
           <entry key="project.open.time.9" value="5" />
-          <entry key="project.opened" value="38" />
+          <entry key="project.opened" value="43" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="dummy" value="42" />
-          <entry key="py" value="13261" />
+          <entry key="dummy" value="85" />
+          <entry key="py" value="20292" />
           <entry key="txt" value="21" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="63" />
-          <entry key="Python" value="9818" />
+          <entry key="PLAIN_TEXT" value="106" />
+          <entry key="Python" value="16849" />
           <entry key="Scratch" value="3443" />
         </counts>
       </usages-collector>
@@ -52,14 +67,14 @@
         <counts>
           <entry key="csv" value="1" />
           <entry key="log" value="1" />
-          <entry key="py" value="161" />
+          <entry key="py" value="211" />
           <entry key="txt" value="25" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="PLAIN_TEXT" value="27" />
-          <entry key="Python" value="124" />
+          <entry key="Python" value="174" />
           <entry key="Scratch" value="37" />
         </counts>
       </usages-collector>
@@ -71,43 +86,74 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/omniglot_similarity.py">
+        <entry file="file://$PROJECT_DIR$/../MusicSimilarity/helper/dataset_tools.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="779">
-              <caret line="45" column="13" selection-start-line="45" selection-start-column="13" selection-end-line="45" selection-end-column="13" />
+            <state relative-caret-position="247">
+              <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
               <folding>
-                <element signature="e#69#96#0" expanded="true" />
+                <element signature="e#0#13#0" expanded="true" />
+                <marker date="1552732223526" expanded="true" signature="731:846" ph="..." />
+                <marker date="1552732223526" expanded="true" signature="841:842" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/omniglot_evaluate_verification_performance.py">
+        <entry file="file://$PROJECT_DIR$/../MusicSimilarity/models/simple_genre_model.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="665">
-              <caret line="38" column="22" selection-start-line="38" selection-start-column="22" selection-end-line="38" selection-end-column="22" />
+            <state relative-caret-position="551">
+              <caret line="29" selection-start-line="29" selection-end-line="29" />
               <folding>
-                <element signature="e#84#141#0" expanded="true" />
+                <element signature="e#0#30#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../MusicSimilarity/helper/prepare_triplets.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="209">
+              <caret line="11" column="34" lean-forward="true" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
+              <folding>
+                <element signature="e#0#28#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../MusicSimilarity/data/playlists.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="361">
+              <caret line="19" column="21" lean-forward="true" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
+              <folding>
+                <element signature="e#167#180#0" expanded="true" />
+                <marker date="1552741477987" expanded="true" signature="294:296" ph="..." />
+                <marker date="1552741477987" expanded="true" signature="1063:1251" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../MusicSimilarity/music_similarity.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="351">
+              <caret line="22" column="48" selection-start-line="22" selection-start-column="48" selection-end-line="22" selection-end-column="48" />
+              <folding>
+                <element signature="e#131#170#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/omniglot_evaluate_kshot_performance.py">
+        <entry file="file://$PROJECT_DIR$/../MusicSimilarity/helper/losses_similarity.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="541">
-              <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MNIST_few_shot.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
-              <caret line="25" column="35" selection-start-line="25" selection-start-column="35" selection-end-line="25" selection-end-column="35" />
+            <state relative-caret-position="437">
+              <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
             </state>
           </provider>
         </entry>
@@ -127,15 +173,21 @@
       <find>0.6</find>
       <find>0.85</find>
       <find>\Users\tobia\Documents\Programmieren\AI\Few-Shot-Learning\saved_models\211018 MNIST Similari</find>
-      <find>\</find>
       <find>num_trios</find>
+      <find>40</find>
+      <find>cross</find>
+      <find>lenght</find>
+      <find>\</find>
+      <find>K.</find>
     </findStrings>
     <replaceStrings>
+      <replace>length</replace>
       <replace>/</replace>
+      <replace>np.</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../MusicSimilarity" />
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/models/omniglot_basic_classification_model.py" root0="SKIP_INSPECTION" />
@@ -166,7 +218,6 @@
         <option value="$PROJECT_DIR$/omniglot_similarity_hps.py" />
         <option value="$PROJECT_DIR$/data/omniglot.py" />
         <option value="$PROJECT_DIR$/MNIST-generator.py" />
-        <option value="$PROJECT_DIR$/models/MNIST_basic_similarity_model.py" />
         <option value="$PROJECT_DIR$/models/MNIST_conv_similarity_model.py" />
         <option value="$PROJECT_DIR$/MNIST_generative.py" />
         <option value="$PROJECT_DIR$/MNIST_generator.py" />
@@ -182,6 +233,15 @@
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_2.py" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_1.py" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_3.py" />
+        <option value="$PROJECT_DIR$/../MusicSimilarity/helper/losses.py" />
+        <option value="$PROJECT_DIR$/../MusicSimilarity/helper/logger.py" />
+        <option value="$PROJECT_DIR$/models/MNIST_basic_similarity_model.py" />
+        <option value="$PROJECT_DIR$/../MusicSimilarity/helper/dataset_tools.py" />
+        <option value="$PROJECT_DIR$/../MusicSimilarity/data/playlists.py" />
+        <option value="$PROJECT_DIR$/../MusicSimilarity/helper/prepare_triplets.py" />
+        <option value="$PROJECT_DIR$/../MusicSimilarity/helper/losses_similarity.py" />
+        <option value="$PROJECT_DIR$/../MusicSimilarity/music_similarity.py" />
+        <option value="$PROJECT_DIR$/../MusicSimilarity/models/simple_genre_model.py" />
       </list>
     </option>
   </component>
@@ -194,38 +254,60 @@
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
       <profile-state>
+        <expanded-state>
+          <State />
+          <State>
+            <id>Python</id>
+          </State>
+        </expanded-state>
         <selected-state>
           <State>
-            <id>Buildout</id>
+            <id>PyPep8Inspection</id>
           </State>
         </selected-state>
       </profile-state>
     </entry>
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="Few-Shot-Learning" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Few-Shot-Learning" type="462c0819:PsiDirectoryNode" />
+              <item name="MusicSimilarity" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Few-Shot-Learning" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MusicSimilarity" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Few-Shot-Learning" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MusicSimilarity" type="462c0819:PsiDirectoryNode" />
+              <item name="helper" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Few-Shot-Learning" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MusicSimilarity" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SearchEverywhereHistoryKey" value="plugins&#9;ACTION&#9;WelcomeScreen.Plugins" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="Python" />
     <property name="full.screen.before.presentation.mode" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../MNIST" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../MusicSimilarity" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
   </component>
   <component name="PyConsoleOptionsProvider">
@@ -258,7 +340,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.scratch_3">
+  <component name="RunManager" selected="Python.music_similarity">
     <configuration name="MNIST_generative" type="PythonConfigurationType" factoryName="Python">
       <module name="Few-Shot-Learning" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -322,6 +404,27 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="music_similarity" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="MusicSimilarity" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../MusicSimilarity" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../MusicSimilarity/music_similarity.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="omniglot_classification" type="PythonConfigurationType" factoryName="Python">
       <module name="Few-Shot-Learning" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -377,27 +480,6 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/omniglot_evaluate_verification_performance.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="omniglot_fewshot" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="Few-Shot-Learning" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/omniglot_fewshot.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -541,19 +623,19 @@
       <item itemvalue="Python.MNIST_generator" />
       <item itemvalue="Python.MNIST_generative" />
       <item itemvalue="Python.scratch_3" />
-      <item itemvalue="Python.omniglot_fewshot" />
       <item itemvalue="Python.scratch" />
       <item itemvalue="Python.scratch_1" />
       <item itemvalue="Python.omniglot_evaluate_kshot_performance" />
       <item itemvalue="Python.scratch_2" />
+      <item itemvalue="Python.music_similarity" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.music_similarity" />
         <item itemvalue="Python.scratch_1" />
         <item itemvalue="Python.scratch_2" />
         <item itemvalue="Python.omniglot_evaluate_kshot_performance" />
         <item itemvalue="Python.scratch" />
-        <item itemvalue="Python.omniglot_fewshot" />
       </list>
     </recent_temporary>
   </component>
@@ -582,7 +664,7 @@
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1819" height="1178" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15207632" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" side_tool="true" visible="true" weight="0.108305275" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" weight="0.32963988" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -598,27 +680,8 @@
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.3291866" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.24957362" />
     </layout>
-    <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15207632" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" weight="0.32963988" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3291866" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49943882" visible="true" weight="0.23636363" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="7" weight="0.3291866" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.37416267" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5005612" side_tool="true" weight="0.38564593" />
-      <window_info anchor="bottom" id="Python Console" order="10" weight="0.3291866" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-    </layout-to-restore>
   </component>
   <component name="Vcs.Log.History.Properties">
     <option name="COLUMN_ORDER">
@@ -671,50 +734,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/MNIST_10_hot.py" />
-    <entry file="file://$PROJECT_DIR$/MNIST_10_shot.py" />
-    <entry file="file://$PROJECT_DIR$/data/FashionMNIST.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-487">
-          <caret line="1" column="21" selection-start-line="1" selection-start-column="21" selection-end-line="1" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/MNIST_basic_few_shot_model.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="14" column="79" lean-forward="true" selection-start-line="14" selection-start-column="79" selection-end-line="14" selection-end-column="79" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Music Experiment/processSonograms.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Music Experiment/analyseNet.2.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/MNIST_basic_similarity_model_talos.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="28" column="59" lean-forward="true" selection-start-line="13" selection-start-column="4" selection-end-line="28" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MNIST_classification.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="20" column="37" selection-start-line="20" selection-start-column="37" selection-end-line="20" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test.py" />
-    <entry file="file://$PROJECT_DIR$/data/MNIST.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="123">
-          <caret line="15" column="49" selection-start-line="15" selection-start-column="49" selection-end-line="15" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../Genre-Classification/helper/logger.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -753,9 +772,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Omniglot Similarity Conv 28.txt" />
-    <entry file="file://$PROJECT_DIR$/models/MNIST_basic_conv_model.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/omniglot_similarity_hps.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-451">
@@ -771,21 +787,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/MNIST-generator.py" />
-    <entry file="file://$PROJECT_DIR$/helper/losses_similarity.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="874">
-          <caret line="47" column="72" selection-start-line="47" selection-start-column="72" selection-end-line="47" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/models/MNIST_basic_enhancer_model.py" />
-    <entry file="file://$PROJECT_DIR$/models/MNIST_basic_similarity_model.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="64" lean-forward="true" selection-start-line="8" selection-start-column="64" selection-end-line="8" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/models/MNIST_conv_similarity_model.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
@@ -832,16 +834,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MNIST_similarity.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Miniconda3/pkgs/pyqt-5.9.2-py36h6538335_2/info/recipe/pyqt_test.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$USER_HOME$/Miniconda3/pkgs/pyqt-5.9.2-py36h6538335_2/info/recipe/pyqt_test.py" />
     <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
@@ -863,50 +856,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Miniconda3/Lib/site-packages/skimage/io/_plugins/pil_plugin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="428">
-          <caret line="38" column="30" lean-forward="true" selection-start-line="38" selection-start-column="30" selection-end-line="38" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/omniglot_similarity.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="779">
-          <caret line="45" column="13" selection-start-line="45" selection-start-column="13" selection-end-line="45" selection-end-column="13" />
-          <folding>
-            <element signature="e#69#96#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/omniglot_evaluate_verification_performance.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="665">
-          <caret line="38" column="22" selection-start-line="38" selection-start-column="22" selection-end-line="38" selection-end-column="22" />
-          <folding>
-            <element signature="e#84#141#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MNIST_few_shot.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="25" column="35" selection-start-line="25" selection-start-column="35" selection-end-line="25" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/helper/prepare_triplets.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2033">
-          <caret line="110" column="107" selection-start-line="110" selection-start-column="107" selection-end-line="110" selection-end-column="107" />
-          <folding>
-            <marker date="1543564932451" expanded="true" signature="6952:6957" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/Miniconda3/Lib/site-packages/skimage/io/_plugins/pil_plugin.py" />
     <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_2.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="57">
@@ -928,10 +878,171 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/omniglot_similarity.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="779">
+          <caret line="45" column="13" selection-start-line="45" selection-start-column="13" selection-end-line="45" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/omniglot_evaluate_verification_performance.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="665">
+          <caret line="38" column="22" selection-start-line="38" selection-start-column="22" selection-end-line="38" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/omniglot_evaluate_kshot_performance.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="541">
-          <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
+        <state relative-caret-position="218">
+          <caret line="17" column="26" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MNIST_few_shot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="25" column="35" selection-start-line="25" selection-start-column="35" selection-end-line="25" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/MNIST_basic_conv_model.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../MusicSimilarity/helper/logger.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" column="32" selection-start-line="5" selection-start-column="32" selection-end-line="5" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/MNIST.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="532">
+          <caret line="31" selection-start-line="31" selection-end-line="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Genre-Classification/classification.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="722">
+          <caret line="38" column="76" lean-forward="true" selection-start-line="14" selection-start-column="4" selection-end-line="38" selection-end-column="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/helper/prepare_triplets.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="750">
+          <caret line="168" selection-start-line="168" selection-end-line="175" selection-end-column="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Genre-Classification/helper/hyperparameter_search.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Genre-Classification/helper/dataset_tools.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="25" column="25" lean-forward="true" selection-start-line="25" selection-start-column="25" selection-end-line="25" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Genre-Classification/data/genres.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="589">
+          <caret line="34" column="18" selection-start-line="34" selection-start-column="18" selection-end-line="34" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Genre-Classification/models/simple_genre_model.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/MNIST_basic_similarity_model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="12" column="45" selection-start-line="12" selection-start-column="45" selection-end-line="12" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MNIST_similarity.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="31" column="27" selection-start-line="31" selection-start-column="27" selection-end-line="31" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../MusicSimilarity/helper/losses.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" column="45" lean-forward="true" selection-start-line="6" selection-start-column="45" selection-end-line="6" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/helper/losses_similarity.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="26" lean-forward="true" selection-start-line="23" selection-start-column="8" selection-end-line="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../MusicSimilarity/models/simple_genre_model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="551">
+          <caret line="29" selection-start-line="29" selection-end-line="29" />
+          <folding>
+            <element signature="e#0#30#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../MusicSimilarity/helper/dataset_tools.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+            <marker date="1552732223526" expanded="true" signature="731:846" ph="..." />
+            <marker date="1552732223526" expanded="true" signature="841:842" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../MusicSimilarity/music_similarity.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="22" column="48" selection-start-line="22" selection-start-column="48" selection-end-line="22" selection-end-column="48" />
+          <folding>
+            <element signature="e#131#170#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../MusicSimilarity/data/playlists.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="19" column="21" lean-forward="true" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
+          <folding>
+            <element signature="e#167#180#0" expanded="true" />
+            <marker date="1552741477987" expanded="true" signature="294:296" ph="..." />
+            <marker date="1552741477987" expanded="true" signature="1063:1251" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../MusicSimilarity/helper/prepare_triplets.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" column="34" lean-forward="true" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../MusicSimilarity/helper/losses_similarity.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
         </state>
       </provider>
     </entry>

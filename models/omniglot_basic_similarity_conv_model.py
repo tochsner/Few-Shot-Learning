@@ -13,26 +13,20 @@ from keras.layers import Concatenate
 from keras.regularizers import l2
 
 
-def build_model(input_shape):
+def build_model(input_shape, embedding_length):
     output_length = input_shape[0] * input_shape[1]
     input_layer = Input(shape=input_shape)
-    conv = Conv2D(64, (3, 3), activation="relu")(input_layer)
-    conv = BatchNormalization()(conv)
-    conv = MaxPooling2D((2, 2))(conv)
-    conv = Conv2D(64, (3, 3), activation="relu")(conv)
-    conv = BatchNormalization()(conv)
-    conv = MaxPooling2D((2, 2))(conv)
-    conv = Conv2D(64, (3, 3), activation="relu")(conv)
-    conv = BatchNormalization()(conv)
-    conv = MaxPooling2D((2, 2))(conv)
-    flatten = Flatten()(conv)
-    dense = Dense(256, activation="relu")(flatten)
-    encoder_output_layer = Dense(32, activation="sigmoid")(dense)
+    conv = Conv2D(128, (3, 3), activation="relu")(input_layer)
+    conv = MaxPooling2D((2,2))(conv)
 
-    decoder_dense = Dense(128, activation='relu')(encoder_output_layer)
-    decoder_dense = Dense(256, activation='relu')(decoder_dense)
-    decoder_dense = Dense(512, activation='relu')(decoder_dense)
-    decoder_output_layer = Dense(output_length, activation='sigmoid')(decoder_dense)
+    dense = Flatten()(conv)
+    dense = Dense(128, activation='relu')(dense)
+    dense = Dropout(0.3)(dense)
+    
+    encoder_output_layer = Dense(embedding_length, activation="sigmoid")(dense)
+
+    #decoder_dense = Dense(10, activation='relu')(encoder_output_layer)    
+    decoder_output_layer = Dense(output_length, activation='sigmoid')(encoder_output_layer)
 
     output_layer = Concatenate()([encoder_output_layer, decoder_output_layer])
 

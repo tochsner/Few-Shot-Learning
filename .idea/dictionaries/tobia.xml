@@ -2,7 +2,10 @@
   <dictionary name="tobia">
     <words>
       <w>conv</w>
+      <w>keras</w>
       <w>omniglot</w>
+      <w>playlists</w>
+      <w>pred</w>
     </words>
   </dictionary>
 </component>

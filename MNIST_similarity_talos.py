@@ -44,10 +44,10 @@ def train(x_train, y_train, x_val, y_val, params):
     
     for e in range(epochs):        
         for b in range(samples_per_epoch // batch_size):
-            (x_train, y_train) = createTrainingDataForQuadrupletLoss(model, data_train, batch_size, params['embeddings'])
+            (x_train, y_train) = create_training_data_for_quadruplet_loss(model, data_train, batch_size, params['embeddings'])
             out = model.fit(x_train, y_train, epochs=1, verbose=0)
     
-    (x_test, y_test) = createTrainingDataForQuadrupletLoss(model, data_test, number_test_samples, params['embeddings'])
+    (x_test, y_test) = create_training_data_for_quadruplet_loss(model, data_test, number_test_samples, params['embeddings'])
     
     out = model.fit(x_train, y_train, epochs=1, verbose=0, validation_data=(x_test, y_test))
     
