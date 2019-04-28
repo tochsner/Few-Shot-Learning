@@ -4,8 +4,7 @@ Downloads the omniglot dataset and prepares it for the use with keras.
 
 import os
 import numpy as np
-from scipy.misc import imread
-from scipy.misc import imresize
+from PIL import Image
 
 background_set_path = "data/omniglot/images_background/images_background"
 evaluation_set_path = "data/omniglot/images_evaluation/images_evaluation"
@@ -14,7 +13,8 @@ img_rows = 28
 img_cols = 28
 
 def load_image(path):
-    return 1 - imresize(imread(path), (img_rows, img_cols)) / 256
+    return 1 - np.array(Image.open(path).resize((img_rows, img_cols))) / 256
+    
 
 """
 Loads the omniglot dataset.
