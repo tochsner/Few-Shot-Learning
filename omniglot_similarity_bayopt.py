@@ -7,7 +7,6 @@ from helper.prepare_triplets import *
 from models.omniglot_basic_similarity_conv_model import *
 from helper.losses_similarity import *
 from keras.optimizers import Adam, SGD
-import itertools
 from bayes_opt import BayesianOptimization
 
 input_shape = (28, 28, 1)
