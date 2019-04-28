@@ -13,13 +13,13 @@ input_shape = (28, 28, 1)
 input_length = 28, 28
 embedding_length = 32
 
-epochs = 30
+epochs = 100
 samples_per_epoch = 5000
 batch_size = 32
 test_tasks_per_epoch = 1000
 
-lr = 0.002
-momentum = 0.5
+lr = 1e5
+momentum = 0.99
 
 losses = Losses(input_length, embedding_length, decoder_factor=0.0)
 
@@ -32,7 +32,7 @@ print(sum([len(x) for x in data_train]))
 def train_model(run_number=0):    
     optimizer = SGD(lr, momentum=momentum)
 
-    model = build_model(input_shape)
+    model = build_model(input_shape, embedding_length)
     model.compile(optimizer, losses.quadruplet_loss, metrics=[losses.quadruplet_metric])
 
     model.summary()

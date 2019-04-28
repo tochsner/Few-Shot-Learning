@@ -54,7 +54,7 @@ Based on quadruplet-selection.
 Output format of the Keras model: Embedding ; Output (Flatten)
 Format of y_train: Target Embedding ; Dissimilar Embedding ; Target Decoder Output
 """
-def create_training_data_for_quadruplet_loss(model, grouped_data, num_samples, embedding_lenght, mode = 0):
+def create_training_data_for_quadruplet_loss(model, grouped_data, num_samples, embedding_lenght, mode=0):
     num_classes = len(grouped_data)
     input_lenght = np.prod(grouped_data[0][0].shape)
 
@@ -152,6 +152,10 @@ Randomly chooses k samples from n classes for few-shot-learning
 """
 def sample_data_for_n_way_k_shot(grouped_data, n, k):
     num_classes = list(range(len(grouped_data)))
+    
+    while len(num_classes) < n:
+        num_classes += num_classes
+    
     sampled_grouped_data = []
 
     random.shuffle(num_classes)

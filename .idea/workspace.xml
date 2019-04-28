@@ -2,21 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e00c8425-6c7f-43a0-adb4-72fc4689ae11" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/Few-Shot-Learning.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Few-Shot-Learning.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/tobia.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/tobia.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MNIST_few_shot.py" beforeDir="false" afterPath="$PROJECT_DIR$/MNIST_few_shot.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MNIST_generative.py" beforeDir="false" afterPath="$PROJECT_DIR$/MNIST_generative.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MNIST_similarity.py" beforeDir="false" afterPath="$PROJECT_DIR$/MNIST_similarity.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MNIST_similarity_talos.py" beforeDir="false" afterPath="$PROJECT_DIR$/MNIST_similarity_talos.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/helper/prepare_triplets.py" beforeDir="false" afterPath="$PROJECT_DIR$/helper/prepare_triplets.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/MNIST_basic_similarity_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/MNIST_basic_similarity_model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/omniglot_fewshot.py" beforeDir="false" afterPath="$PROJECT_DIR$/omniglot_fewshot.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/omniglot_similarity.py" beforeDir="false" afterPath="$PROJECT_DIR$/omniglot_similarity.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/omniglot_similarity_hps.py" beforeDir="false" afterPath="$PROJECT_DIR$/omniglot_similarity_hps.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MusicSimilarity/t.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../MusicSimilarity/t.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/omniglot_similarity_bayopt.py" beforeDir="false" afterPath="$PROJECT_DIR$/omniglot_similarity_bayopt.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Genre-Classification/classification.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Genre-Classification/classification.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Genre-Classification/models/simple_genre_model (copy).py" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -28,7 +16,7 @@
     <session id="-231381463">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="43" />
+          <entry key="project.closed" value="44" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.1" value="8" />
           <entry key="project.open.time.10" value="5" />
@@ -42,11 +30,12 @@
           <entry key="project.open.time.22" value="2" />
           <entry key="project.open.time.24" value="1" />
           <entry key="project.open.time.25" value="3" />
+          <entry key="project.open.time.28" value="1" />
           <entry key="project.open.time.5" value="1" />
           <entry key="project.open.time.7" value="2" />
           <entry key="project.open.time.8" value="1" />
           <entry key="project.open.time.9" value="5" />
-          <entry key="project.opened" value="43" />
+          <entry key="project.opened" value="44" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -84,81 +73,7 @@
     <favorites_list name="Few-Shot-Learning" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../MusicSimilarity/helper/dataset_tools.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
-              <folding>
-                <element signature="e#0#13#0" expanded="true" />
-                <marker date="1552732223526" expanded="true" signature="731:846" ph="..." />
-                <marker date="1552732223526" expanded="true" signature="841:842" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../MusicSimilarity/models/simple_genre_model.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="551">
-              <caret line="29" selection-start-line="29" selection-end-line="29" />
-              <folding>
-                <element signature="e#0#30#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../MusicSimilarity/helper/prepare_triplets.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="11" column="34" lean-forward="true" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
-              <folding>
-                <element signature="e#0#28#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../MusicSimilarity/data/playlists.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="19" column="21" lean-forward="true" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
-              <folding>
-                <element signature="e#167#180#0" expanded="true" />
-                <marker date="1552741477987" expanded="true" signature="294:296" ph="..." />
-                <marker date="1552741477987" expanded="true" signature="1063:1251" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../MusicSimilarity/music_similarity.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="351">
-              <caret line="22" column="48" selection-start-line="22" selection-start-column="48" selection-end-line="22" selection-end-column="48" />
-              <folding>
-                <element signature="e#131#170#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/../MusicSimilarity/helper/losses_similarity.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="437">
-              <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -187,7 +102,7 @@
     </replaceStrings>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../MusicSimilarity" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/models/omniglot_basic_classification_model.py" root0="SKIP_INSPECTION" />
@@ -909,13 +824,7 @@
     <entry file="file://$PROJECT_DIR$/models/MNIST_basic_conv_model.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/../MusicSimilarity/helper/logger.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="32" selection-start-line="5" selection-start-column="32" selection-end-line="5" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../MusicSimilarity/helper/logger.py" />
     <entry file="file://$PROJECT_DIR$/data/MNIST.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="532">
@@ -971,13 +880,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../MusicSimilarity/helper/losses.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" column="45" lean-forward="true" selection-start-line="6" selection-start-column="45" selection-end-line="6" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../MusicSimilarity/helper/losses.py" />
     <entry file="file://$PROJECT_DIR$/helper/losses_similarity.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="475">
@@ -985,67 +888,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../MusicSimilarity/models/simple_genre_model.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="551">
-          <caret line="29" selection-start-line="29" selection-end-line="29" />
-          <folding>
-            <element signature="e#0#30#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../MusicSimilarity/helper/dataset_tools.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-            <marker date="1552732223526" expanded="true" signature="731:846" ph="..." />
-            <marker date="1552732223526" expanded="true" signature="841:842" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../MusicSimilarity/music_similarity.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="22" column="48" selection-start-line="22" selection-start-column="48" selection-end-line="22" selection-end-column="48" />
-          <folding>
-            <element signature="e#131#170#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../MusicSimilarity/data/playlists.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="19" column="21" lean-forward="true" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
-          <folding>
-            <element signature="e#167#180#0" expanded="true" />
-            <marker date="1552741477987" expanded="true" signature="294:296" ph="..." />
-            <marker date="1552741477987" expanded="true" signature="1063:1251" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../MusicSimilarity/helper/prepare_triplets.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" column="34" lean-forward="true" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../MusicSimilarity/helper/losses_similarity.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../MusicSimilarity/models/simple_genre_model.py" />
+    <entry file="file://$PROJECT_DIR$/../MusicSimilarity/helper/dataset_tools.py" />
+    <entry file="file://$PROJECT_DIR$/../MusicSimilarity/music_similarity.py" />
+    <entry file="file://$PROJECT_DIR$/../MusicSimilarity/data/playlists.py" />
+    <entry file="file://$PROJECT_DIR$/../MusicSimilarity/helper/prepare_triplets.py" />
+    <entry file="file://$PROJECT_DIR$/../MusicSimilarity/helper/losses_similarity.py" />
   </component>
   <component name="masterDetails">
     <states>
