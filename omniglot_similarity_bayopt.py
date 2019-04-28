@@ -12,7 +12,7 @@ from bayes_opt import BayesianOptimization
 input_shape = (28, 28, 1)
 input_length = 28, 28
 
-epochs = 50
+epochs = 75
 samples_per_epoch = 1000
 test_tasks = 750
 
