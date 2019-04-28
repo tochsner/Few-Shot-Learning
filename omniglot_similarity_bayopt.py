@@ -1,5 +1,5 @@
 """
-Runs Bayesian Hyperparameter Optimization on a simple quadruplet cross-digit encoder on ominglot.
+Runs Bayesian Hyperparameter Optimization on a quadruplet cross-digit encoder on ominglot.
 """
 
 from data.omniglot import *
@@ -22,7 +22,9 @@ data_train, data_test = split_list(data, 0.7)
 data_train, data_test = prepare_grouped_data_for_keras(data_train), prepare_grouped_data_for_keras(data_test)
 
 """
-Converts the continous parameters to discrete values and calls train_model.
+Wrapper of train_model which gets called for bayesian optimization.
+Enables fixing certain hyperparameters and converting the continous 
+values provided by the optimization algorithm to discrete values.
 """
 def train_wrapper(lr, decoder_factor):
     batch_size = 32
@@ -30,6 +32,11 @@ def train_wrapper(lr, decoder_factor):
     momentum = 0.99     
     return train_model(lr, momentum, decoder_factor, batch_size, embedding_length)
 
+
+"""
+Trains a CNN on omniglot-verification using a quadruplet cross-character encoder.
+Evaluates the model on verification and 20-way 1-shot tasks.
+"""
 def train_model(lr, momentum, decoder_factor, batch_size, embedding_length):    
     losses = Losses(input_length, embedding_length, decoder_factor)
 
@@ -54,6 +61,10 @@ def train_model(lr, momentum, decoder_factor, batch_size, embedding_length):
     return oneshot_accuracy
 
 
+"""
+Calculates the probability that two images of the same character are rated as more
+similar than two distinct characters.
+"""
 def calculate_verification_accuracy(model, data_test, embedding_length):
     batch_size = 32
     trials = 1000
@@ -71,6 +82,9 @@ def calculate_verification_accuracy(model, data_test, embedding_length):
     return accuracy / count
 
 
+"""
+Calculates the performance in a 20-way 1-shot task.
+"""
 def calculate_20_way_1_shot_accuracy(model, embedding_length):
     n = 20
     k = 1
