@@ -20,14 +20,15 @@ data = load_background_data()
 data_train, data_test = split_list(data, 0.7)
 data_train, data_test = prepare_grouped_data_for_keras(data_train), prepare_grouped_data_for_keras(data_test)
 
+
 """
 Wrapper of train_model which gets called for bayesian optimization.
 Enables fixing certain hyperparameters and converting the continous 
 values provided by the optimization algorithm to discrete values.
 """
 def train_wrapper(lr, decoder_factor):
-    batch_size = 32
-    embedding_length = 1024
+    batch_size = 128
+    embedding_length = 64
     momentum = 0.99     
     return train_model(lr, momentum, decoder_factor, batch_size, embedding_length)
 
@@ -52,6 +53,11 @@ def train_model(lr, momentum, decoder_factor, batch_size, embedding_length):
             (x_train, y_train) = create_training_data_for_quadruplet_loss(model, characters, batch_size, embedding_length)        
 
             model.fit(x_train, y_train, epochs=1, verbose=0)
+
+            # Test if a completely inaccurate learning rate leads to a over- / undeflow
+            verification_accuracy = calculate_verification_accuracy(model, data_test, embedding_length)
+            if verification_accuracy < 0.3:
+                break
 
     verification_accuracy = calculate_verification_accuracy(model, data_test, embedding_length)
     oneshot_accuracy = calculate_20_way_1_shot_accuracy(model, embedding_length)
@@ -107,10 +113,14 @@ def calculate_20_way_1_shot_accuracy(model, embedding_length):
             prototypes.append(np.mean(predictions, axis=0))
                       
         distances = [losses.get_distance(prototype, query_embedding) for prototype in prototypes]
-        predicted_index = np.argmin(distances)
 
-        if predicted_index == 0:
-            accuracy += 1
+        # Sometimes, due to a bad choice of a learning rate, all embeddings are identical.
+        # Because argmax is then misleading, we ignore this case.
+        if max(distances) != 0:
+            predicted_index = np.argmin(distances)
+
+            if predicted_index == 0:
+                accuracy += 1
         tests += 1
 
     return accuracy / tests
@@ -121,7 +131,6 @@ parameter_bounds = {'lr': (1e-7, 1e-3),
 
 optimizer = BayesianOptimization(   f=train_wrapper,
                                     pbounds=parameter_bounds,
-                                    random_state=1
-                                )
+                                    random_state=1)
 
 optimizer.maximize(init_points=15, n_iter=100)

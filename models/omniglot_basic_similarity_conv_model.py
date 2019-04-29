@@ -24,8 +24,8 @@ def build_model(input_shape, embedding_length):
     conv = MaxPooling2D((2,2))(conv)
 
     dense = Flatten()(conv)    
-     
-    encoder_output_layer = Dense(embedding_length, activation="sigmoid", kernel_regularizer=l2(0.0002))(dense)
+    dense = Dense(512, activation='relu', kernel_regularizer=l2(0.0002))(dense)
+    encoder_output_layer = Dense(embedding_length, activation="sigmoid", kernel_regularizer=l2(0.0002))(encoder_output_layer)
 
     decoder_dense = Dense(512, activation='relu', kernel_regularizer=l2(0.0002))(encoder_output_layer)   
 
