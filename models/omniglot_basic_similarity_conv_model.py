@@ -6,10 +6,9 @@ Embedding-Length = 64
 
 import keras
 from keras.models import Model
-from keras.models import Sequential
-from keras.layers import Input, Dense, Dropout, Flatten, Reshape
-from keras.layers import Conv2D, MaxPooling2D, BatchNormalization
-from keras.layers import Concatenate, Activation
+from keras.layers import Input, Dense, Dropout, Flatten
+from keras.layers import Conv2D, MaxPooling2D
+from keras.layers import Concatenate
 from keras.regularizers import l2
 
 
@@ -25,12 +24,14 @@ def build_model(input_shape, embedding_length):
 
     dense = Flatten()(conv)    
     dense = Dense(512, activation='relu', kernel_regularizer=l2(0.0002))(dense)
-    encoder_output_layer = Dense(embedding_length, activation="sigmoid", kernel_regularizer=l2(0.0002))(encoder_output_layer)
+    dense = Dropout(0.1)(dense)
+    
+    encoder_output_layer = Dense(embedding_length, activation="sigmoid", kernel_regularizer=l2(0.0002))(dense)
 
-    decoder_dense = Dense(512, activation='relu', kernel_regularizer=l2(0.0002))(encoder_output_layer)   
+    decoder_dense = Dense(512, activation='relu', kernel_regularizer=l2(0.0002))(encoder_output_layer)
+    decoder_dense = Dropout(0.1)(decoder_dense)
 
     decoder_output_layer = Dense(output_length, activation='sigmoid')(decoder_dense)
-
     output_layer = Concatenate()([encoder_output_layer, decoder_output_layer])
 
     model = Model(inputs=input_layer, outputs=output_layer)
