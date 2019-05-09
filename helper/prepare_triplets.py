@@ -1,5 +1,6 @@
 import numpy as np
 import random
+from scipy.misc import imsave
 
 from .losses_similarity import *
 
@@ -108,6 +109,7 @@ def create_training_data_for_quadruplet_loss(model, grouped_data, num_samples, e
             y_data[2 * sample + 1, : embedding_lenght] = outputs[3][ : embedding_lenght]
             y_data[2 * sample + 1, embedding_lenght : 2*embedding_lenght] = outputs[0][ : embedding_lenght]
             y_data[2 * sample + 1, 2*embedding_lenght : ] = second_sample2.reshape((input_lenght,))
+
         elif argmin == 1:
             # mainSample 1
             x_data[2 * sample] = main_sample1    

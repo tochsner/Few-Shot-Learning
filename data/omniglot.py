@@ -13,7 +13,7 @@ img_rows = 28
 img_cols = 28
 
 def load_image(path):
-    return 1 - np.array(Image.open(path).resize((img_rows, img_cols))) / 256
+    return 1 - np.array(Image.open(path).resize((img_rows, img_cols)))
     
 
 """
@@ -28,17 +28,17 @@ def load_background_data():
         background_data.append([])
         for character in os.listdir(language_path):
             character_path = os.path.join(language_path, character)
-            background_data[-1].append([]) # Create for every possible rotation a character
+            background_data[-1].append([])
             background_data[-1].append([])
             background_data[-1].append([])
             background_data[-1].append([])
             for image in os.listdir(character_path):
                 image_path = os.path.join(character_path, image)
                 image = load_image(image_path)
-                background_data[-1][-4].append(image)
-                background_data[-1][-3].append(np.rot90(image, 1))
-                background_data[-1][-2].append(np.rot90(image, 2))
-                background_data[-1][-1].append(np.rot90(image, 3))                
+                background_data[-1][-1].append(np.rot90(image, 1)) 
+                background_data[-1][-2].append(np.rot90(image, 2)) 
+                background_data[-1][-3].append(np.rot90(image, 3)) 
+                background_data[-1][-4].append(np.rot90(image, 4))                
 
     return background_data
 

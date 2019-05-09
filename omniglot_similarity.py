@@ -11,15 +11,11 @@ import itertools
 
 input_shape = (28, 28, 1)
 input_length = 28, 28
-embedding_length = 32
+embedding_length = 64
 
 epochs = 100
-samples_per_epoch = 5000
+samples_per_epoch = 3000
 batch_size = 32
-test_tasks_per_epoch = 1000
-
-lr = 1e5
-momentum = 0.99
 
 losses = Losses(input_length, embedding_length, decoder_factor=0.0)
 
@@ -27,71 +23,92 @@ data = load_background_data()
 data_train, data_test = split_list(data, 0.7)
 data_train, data_test = prepare_grouped_data_for_keras(data_train), prepare_grouped_data_for_keras(data_test)
 
-print(sum([len(x) for x in data_train]))
 
 def train_model(run_number=0):    
-    optimizer = SGD(lr, momentum=momentum)
+    optimizer = Adam()
 
     model = build_model(input_shape, embedding_length)
     model.compile(optimizer, losses.quadruplet_loss, metrics=[losses.quadruplet_metric])
 
     model.summary()
 
+    max = 0
+
     for e in range(epochs):
-        train_accuracy = 0
-        train_tests = 0        
-        
-        for b in range(samples_per_epoch // batch_size):
-            characters = random.choice(data_train) # list(itertools.chain.from_iterable(data_train))
-            (x_train, y_train) = create_training_data_for_quadruplet_loss(model, characters, batch_size, embedding_length)        
+        if e > 0:
+            for b in range(samples_per_epoch // batch_size):
+                characters = random.choice(data_train)
+                (x_train, y_train) = create_training_data_for_quadruplet_loss(model, characters, batch_size, embedding_length)        
 
-            model.fit(x_train, y_train, epochs=1, verbose=0)
+                model.fit(x_train, y_train, epochs=1, verbose=0)
 
-        # evaluate test accuarcy
-        test_accuracy = 0
-        test_tests = 0
-        for b in range(test_tasks_per_epoch // batch_size):
-            characters = random.choice(data_test)
-            (x_train, y_train) = create_training_data_for_quadruplet_loss(model, characters, batch_size, embedding_length, mode=0)
-            test_accuracy += model.evaluate(x_train, y_train, verbose=0)[1]
-            test_tests += 1
+        accuracy = calculate_verification_accuracy(model, data_test, embedding_length)
 
-        print(test_accuracy / test_tests)
-        
-    model.save_weights("saved_models/omniglot_verification " + str(run_number))
+        print(accuracy)
+
+        if accuracy > max:
+            max = accuracy
+            model.save_weights("saved_models/omniglot_verification " + str(run_number))
 
 
-def calculate_k_shot_accuracy(model, n=20):
-    k = 1    
+"""
+Calculates the probability that two images of the same character are rated as more
+similar than two distinct characters.
+"""
+def calculate_verification_accuracy(model, data_test, embedding_length):
+    batch_size = 32
+    trials = 2000
     
+    accuracy = 0    
+    count = 0
+
+    for b in range(trials // batch_size):
+        characters = random.choice(data_test)
+        (x_train, y_train) = create_training_data_for_quadruplet_loss(model, characters, batch_size, embedding_length, mode=1)
+        
+        accuracy += model.evaluate(x_train, y_train, verbose=0)[1]
+        count += 1
+
+    return accuracy / count
+
+
+"""
+Calculates the performance in a 20-way 1-shot task.
+"""
+def calculate_20_way_1_shot_accuracy(model, embedding_length):
+    test_tasks = 5000
+    n = 20
+    k = 1
+   
     tests = 0
     accuracy = 0
 
-    for t in range(test_tasks_per_epoch):                
+    for t in range(test_tasks):                
         prototypes = []
-        test_data = []
+        data = []
 
-        while len(test_data) < n: 
-            characters = random.choice(data_test)
-            test_data = sample_data_for_n_way_k_shot(characters, n, k + 15)
-        
-        support_set = [x[:k] for x in test_data]
-        query_set = [x[k:] for x in test_data]
+        characters = random.choice(data_test)
+        data = sample_data_for_n_way_k_shot(characters, n, k + 1)
+        query_character = data[0][0]
+        support_set = [x[1:] for x in data]
+
+        query_embedding = get_embedding(model.predict(np.array(query_character).reshape(1,28,28,1)), embedding_length)
 
         for i in range(n):
             predictions = get_embedding(model.predict(np.array(support_set[i])), embedding_length)
-            prototypes.append(np.mean(predictions, axis=0))                        
+            prototypes.append(np.mean(predictions, axis=0))
+                      
+        distances = [losses.get_distance(prototype, query_embedding) for prototype in prototypes]
 
-        for i in range(n):
-            query_predictions = get_embedding(model.predict(np.array(query_set[i])), embedding_length)            
+        # Sometimes, due to a bad choice of a learning rate, all embeddings are identical.
+        # Because argmax is then misleading, we ignore this case.
+        if max(distances) > 1e-5:
+            predicted_index = np.argmin(distances)
 
-            for j in range(15):                
-                distances = [losses.get_distance(prototypes[c], query_predictions[j]) for c in range(n)]
-                predicted_index = np.argmin(distances)
-                if predicted_index == i:
-                    accuracy += 1
-                tests += 1
+            if predicted_index == 0:
+                accuracy += 1
+        tests += 1
 
-    return accuracy / max(1, tests)
+    return accuracy / tests
 
 train_model()

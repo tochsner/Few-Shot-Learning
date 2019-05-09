@@ -19,7 +19,7 @@ batch_size = 20
 number_test_samples = 2000
 lr = 0.5
 
-losses = Losses(input_lenght, embedding_lenght, decoder_factor=2)
+losses = Losses(input_lenght, embedding_lenght, decoder_factor=0.6)
 
 data = load_data()
 data = prepare_data_for_keras(data)

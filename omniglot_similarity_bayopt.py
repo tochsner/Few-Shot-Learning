@@ -4,7 +4,7 @@ Runs Bayesian Hyperparameter Optimization on a quadruplet cross-digit encoder on
 
 from data.omniglot import *
 from helper.prepare_triplets import *
-from models.omniglot_basic_similarity_conv_model import *
+from models.omniglot_basic_similarity_model import *
 from helper.losses_similarity import *
 from keras.optimizers import Adam, SGD
 from bayes_opt import BayesianOptimization
@@ -12,7 +12,7 @@ from bayes_opt import BayesianOptimization
 input_shape = (28, 28, 1)
 input_length = 28, 28
 
-epochs = 75
+epochs = 40
 samples_per_epoch = 1000
 test_tasks = 750
 
@@ -26,10 +26,11 @@ Wrapper of train_model which gets called for bayesian optimization.
 Enables fixing certain hyperparameters and converting the continous 
 values provided by the optimization algorithm to discrete values.
 """
-def train_wrapper(lr, decoder_factor):
-    batch_size = 128
-    embedding_length = 64
-    momentum = 0.99     
+def train_wrapper(lr):
+    batch_size = 64
+    embedding_length = 1024
+    momentum = 0.99 
+    decoder_factor = 0    
     return train_model(lr, momentum, decoder_factor, batch_size, embedding_length)
 
 
@@ -53,17 +54,14 @@ def train_model(lr, momentum, decoder_factor, batch_size, embedding_length):
             (x_train, y_train) = create_training_data_for_quadruplet_loss(model, characters, batch_size, embedding_length)        
 
             model.fit(x_train, y_train, epochs=1, verbose=0)
-
-            # Test if a completely inaccurate learning rate leads to a over- / undeflow
-            verification_accuracy = calculate_verification_accuracy(model, data_test, embedding_length)
-            if verification_accuracy < 0.3:
-                break
+        
+        print(e)
 
     verification_accuracy = calculate_verification_accuracy(model, data_test, embedding_length)
-    oneshot_accuracy = calculate_20_way_1_shot_accuracy(model, embedding_length)
-    print(verification_accuracy, oneshot_accuracy)
+    #oneshot_accuracy = calculate_20_way_1_shot_accuracy(model, embedding_length)
+    print(verification_accuracy)
 
-    return oneshot_accuracy
+    return verification_accuracy
 
 
 """
@@ -72,7 +70,7 @@ similar than two distinct characters.
 """
 def calculate_verification_accuracy(model, data_test, embedding_length):
     batch_size = 32
-    trials = 1000
+    trials = 5000
     
     accuracy = 0    
     count = 0
@@ -116,7 +114,7 @@ def calculate_20_way_1_shot_accuracy(model, embedding_length):
 
         # Sometimes, due to a bad choice of a learning rate, all embeddings are identical.
         # Because argmax is then misleading, we ignore this case.
-        if max(distances) != 0:
+        if max(distances) > 1e-5:
             predicted_index = np.argmin(distances)
 
             if predicted_index == 0:
@@ -126,11 +124,12 @@ def calculate_20_way_1_shot_accuracy(model, embedding_length):
     return accuracy / tests
 
 
-parameter_bounds = {'lr': (1e-7, 1e-3),
-                    'decoder_factor': (0,1)}
+parameter_bounds = {'lr': (1e-9, 1e-4)}
 
 optimizer = BayesianOptimization(   f=train_wrapper,
                                     pbounds=parameter_bounds,
                                     random_state=1)
 
-optimizer.maximize(init_points=15, n_iter=100)
+optimizer.maximize(init_points=20, n_iter=100)
+
+print(optimizer.max)

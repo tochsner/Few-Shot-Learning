@@ -2,56 +2,61 @@
 Determines the verification-performance on the evaluation-set of omniglot.
 """
 
-from models.omniglot_basic_similarity_conv_model import *
+from models.omniglot_basic_similarity_model import *
 from data.omniglot import *
 from helper.prepare_triplets import *
 from helper.losses_similarity import *
+from scipy.misc import imsave
 
 input_shape = (28, 28, 1)
 input_length = 28 * 28
-embedding_length = 32
+embedding_length = 64
 
+data_train, data_test = load_background_data(), load_evaluation_data()
+data_train, data_test = prepare_grouped_data_for_keras(data_train), prepare_grouped_data_for_keras(data_test)
 
-def calculate_k_shot_accuracy(model, n, k):
-    number_of_trials = 2000
-
-    queries_per_trial = 15
-
-    data = load_evaluation_data()
-    grouped_data = prepare_grouped_data_for_keras(data)
-
+"""
+Calculates the performance in a 20-way 1-shot task.
+"""
+def calculate_20_way_1_shot_accuracy(model, embedding_length, dataset):
+    test_tasks = 1000
+    n = 20
+    k = 1
+   
     tests = 0
     accuracy = 0
-    for t in range(number_of_trials):
-        print(t, accuracy / max(1, tests))
+
+    for t in range(test_tasks):                
         prototypes = []
+        data = []
 
-        test_data = []
+        characters = random.choice(dataset)
+        data = sample_data_for_n_way_k_shot(characters, n, k + 1)
+        query_character = data[0][0]
+        support_set = [x[1:] for x in data]
 
-        while len(test_data) < n:
-            characters = random.choice(grouped_data)
-            test_data = sample_data_for_n_way_k_shot(characters, n, k + queries_per_trial)
-        
-        support_set = [x[:k] for x in test_data]
-        query_set = [x[k:] for x in test_data]
+        query_embedding = get_embedding(model.predict(np.array(query_character).reshape(1,28,28,1)), embedding_length)
 
-        for c in range(n):            
-            predictions = get_embedding(model.predict(np.array(support_set[c])), embedding_length)
-            prototypes.append(np.mean(predictions, axis=0))
+        imsave("query.png", np.array(query_character).reshape(28,28))
+        imsave("queryreal.png", np.array(support_set[0]).reshape(28,28))
 
-        for c in range(n):
-            for q in range(queries_per_trial):
-                query_prediction = get_embedding(model.predict(np.array(query_set[c][q].reshape((1, 28, 28, 1)))), embedding_length)
+        for i in range(n):
+            predictions = get_embedding(model.predict(np.array(support_set[i])), embedding_length)
+            prototypes.append(predictions[0])
+                      
+        distances = [losses.get_distance(prototype, query_embedding) for prototype in prototypes]
 
-                distances = [losses.get_distance(prototypes[c], query_prediction) for c in range(n)]
-                predicted_index = np.argmin(distances)
-                if predicted_index == c:
-                    accuracy += 1
-                tests += 1
+        predicted_index = np.argmin(distances)
 
-    return accuracy / max(1, tests)
+        imsave("prediction.png", np.array(support_set[predicted_index]).reshape(28,28))
 
-model = build_model(input_shape)
+        if predicted_index == 0:
+            accuracy += 1
+        tests += 1
+
+    return accuracy / tests
+
+model = build_model(input_shape, embedding_length)
 model.load_weights("saved_models/omniglot_verification 0")
 
-print(calculate_k_shot_accuracy(model, 5, 1))
+print(calculate_20_way_1_shot_accuracy(model, embedding_length, data_train))
