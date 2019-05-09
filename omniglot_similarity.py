@@ -13,7 +13,7 @@ input_shape = (28, 28, 1)
 input_length = 28, 28
 embedding_length = 64
 
-epochs = 100
+epochs = 50
 samples_per_epoch = 3000
 batch_size = 32
 
