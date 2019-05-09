@@ -29,8 +29,8 @@ def build_model(input_shape, embedding_length):
 
     encoder_output_layer = Dense(embedding_length, activation="sigmoid")(dense)
 
-    #decoder_dense = Dense(256, activation='relu')(encoder_output_layer)
-    #decoder_dense = Dropout(0.2)(decoder_dense)
+    decoder_dense = Dense(256, activation='relu')(encoder_output_layer)
+    decoder_dense = Dropout(0.2)(decoder_dense)
 
     decoder_output_layer = Dense(output_length, activation='sigmoid')(encoder_output_layer)
 
