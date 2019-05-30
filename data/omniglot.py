@@ -9,8 +9,8 @@ from PIL import Image
 background_set_path = "data/omniglot/images_background/images_background"
 evaluation_set_path = "data/omniglot/images_evaluation/images_evaluation"
 
-img_rows = 28
-img_cols = 28
+img_rows = 105
+img_cols = 105
 
 def load_image(path):
     return 1 - np.array(Image.open(path).resize((img_rows, img_cols)))

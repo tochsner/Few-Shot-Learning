@@ -155,14 +155,20 @@ Randomly chooses k samples from n classes for few-shot-learning
 def sample_data_for_n_way_k_shot(grouped_data, n, k):
     num_classes = list(range(len(grouped_data)))
     
+    query_class = random.choice(num_classes)
+    num_classes.remove(query_class)
+    
     while len(num_classes) < n:
         num_classes += num_classes
-    
+
+    random.shuffle(num_classes)    
+
     sampled_grouped_data = []
+    
+    np.random.shuffle(grouped_data[query_class])
+    sampled_grouped_data.append(grouped_data[query_class][:k])
 
-    random.shuffle(num_classes)
-
-    for c in num_classes[:n]:
+    for c in num_classes[:n-1]:
         np.random.shuffle(grouped_data[c])
         sampled_grouped_data.append(grouped_data[c][:k])
 

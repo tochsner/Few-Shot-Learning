@@ -15,13 +15,16 @@ from keras.regularizers import l2
 def build_model(input_shape, embedding_length):
     output_length = input_shape[0] * input_shape[1]
     input_layer = Input(shape=input_shape)
-    conv = Conv2D(64, (3, 3), activation="relu")(input_layer)
+    conv = Conv2D(265, (10, 10), activation="relu")(input_layer)
     conv = BatchNormalization()(conv)
     conv = MaxPooling2D((2,2))(conv)
-    conv = Conv2D(64, (3, 3), activation="relu")(conv)
+    conv = Conv2D(265, (7, 7), activation="relu")(conv)
     conv = BatchNormalization()(conv)
     conv = MaxPooling2D((2,2))(conv)
-    conv = Conv2D(64, (3, 3), activation="relu")(conv)
+    conv = Conv2D(265, (4, 4), activation="relu")(conv)
+    conv = BatchNormalization()(conv)
+    conv = MaxPooling2D((2,2))(conv)
+    conv = Conv2D(265, (4, 4), activation="relu")(conv)
     conv = BatchNormalization()(conv)
     conv = MaxPooling2D((2,2))(conv)
     
@@ -29,7 +32,7 @@ def build_model(input_shape, embedding_length):
 
     encoder_output_layer = Dense(embedding_length, activation="sigmoid")(dense)
 
-    decoder_dense = Dense(256, activation='relu')(encoder_output_layer)
+    decoder_dense = Dense(4096, activation='relu')(encoder_output_layer)    
     decoder_dense = Dropout(0.2)(decoder_dense)
 
     decoder_output_layer = Dense(output_length, activation='sigmoid')(encoder_output_layer)

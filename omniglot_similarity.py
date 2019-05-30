@@ -9,9 +9,9 @@ from helper.losses_similarity import *
 from keras.optimizers import Adam, SGD
 import itertools
 
-input_shape = (28, 28, 1)
-input_length = 28, 28
-embedding_length = 64
+input_shape = (105, 105, 1)
+input_length = 105, 105
+embedding_length = 1024
 
 epochs = 50
 samples_per_epoch = 3000
@@ -25,12 +25,14 @@ data_train, data_test = prepare_grouped_data_for_keras(data_train), prepare_grou
 
 
 def train_model(run_number=0):    
-    optimizer = Adam()
+    optimizer = Adam(0.0005)
 
     model = build_model(input_shape, embedding_length)
     model.compile(optimizer, losses.quadruplet_loss, metrics=[losses.quadruplet_metric])
 
     model.summary()
+
+    model.load_weights("saved_model/omniglot_verification 1")
 
     max = 0
 
@@ -92,7 +94,7 @@ def calculate_20_way_1_shot_accuracy(model, embedding_length):
         query_character = data[0][0]
         support_set = [x[1:] for x in data]
 
-        query_embedding = get_embedding(model.predict(np.array(query_character).reshape(1,28,28,1)), embedding_length)
+        query_embedding = get_embedding(model.predict(np.array(query_character).reshape(1,105,105,1)), embedding_length)
 
         for i in range(n):
             predictions = get_embedding(model.predict(np.array(support_set[i])), embedding_length)
